@@ -160,7 +160,3 @@ netsim/proxy.py        TCP network-impairment proxy (20–100% strength)
 tools/make_videos.py   test videos with ground truth + reference barcode
 tests/run_scenarios.py end-to-end scenarios -> evidence/
 ```
-
-## Latest test run
-
-13/13 scenarios passed. The summary is in [evidence/RESULTS.md](evidence/RESULTS.md) and the per-scenario integrity reports are in [evidence/reports/](evidence/reports/); open the `.html` files in a browser.
