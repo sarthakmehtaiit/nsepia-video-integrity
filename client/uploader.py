@@ -59,7 +59,8 @@ class Uploader:
     # ------------------------------------------------------------ http
     def req(self, method, path, body=None, headers=None, timeout=10):
         u = urlparse(self.endpoints[self.ep])
-        c = http.client.HTTPConnection(u.hostname, u.port, timeout=timeout)
+        conn = http.client.HTTPSConnection if u.scheme == "https" else http.client.HTTPConnection
+        c = conn(u.hostname, u.port, timeout=timeout)
         try:
             c.request(method, path, body=body, headers=headers or {})
             r = c.getresponse()
