@@ -9,7 +9,7 @@ CSS = """
 @media (prefers-color-scheme:dark){:root{--bg:#141413;--card:#1e1e1c;--ink:#ecebe6;--mute:#9a9992;--line:#33322f;
 --ok:#4cc38a;--warn:#e5a33d;--bad:#ef6b62;--info:#7aa2f0;--chip:#2a2a27}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,system-ui,Segoe UI,sans-serif}
-main{max-width:1080px;margin:0 auto;padding:24px 16px 64px}h1{font-size:22px;margin:0 0 4px}h2{font-size:16px;margin:28px 0 10px}
+main{max-width:1080px;margin:0 auto;padding-block:24px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}h1{font-size:22px;margin:0 0 4px}h2{font-size:16px;margin:28px 0 10px}
 .mute{color:var(--mute)}.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:12px 0}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
 .kv{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}.kv b{display:block;font-size:18px}
@@ -21,6 +21,9 @@ th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertic
 .thumbs{display:flex;flex-wrap:wrap;gap:8px}.thumbs figure{margin:0;font-size:11px;color:var(--mute)}
 .thumbs img{width:160px;border-radius:6px;border:1px solid var(--line);display:block}
 ul{margin:6px 0;padding-left:20px}
+button{font:inherit;padding:7px 14px;border-radius:8px;border:1px solid var(--line);background:var(--info);color:#fff;cursor:pointer}
+button:disabled{opacity:.45;cursor:default}button:focus-visible,input:focus-visible{outline:2px solid var(--info);outline-offset:2px}
+progress{accent-color:var(--info)}
 """
 
 VCLS = {"VALID_NO_ANOMALIES": "ok", "VALID_WITH_MINOR_OBSERVATIONS": "info", "VALID_WITH_FRAME_ANOMALIES": "warn",
@@ -35,25 +38,115 @@ def page(title, body):
             f"initial-scale=1'><title>{e(title)}</title><style>{CSS}</style></head><body><main>{body}</main></body></html>")
 
 
-def dashboard(sessions):
+UPLOAD_JS = r"""
+const $ = (id) => document.getElementById(id);
+let busy = false;
+setInterval(() => { if (!busy) location.reload(); }, 4000);
+const hex = (buf) => [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join('');
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+async function sha(buf) { return hex(await crypto.subtle.digest('SHA-256', buf)); }
+function say(msg, cls) { const el = $('up-status'); el.textContent = msg; el.className = cls || 'mute'; }
+async function withRetry(fn, label) {
+  for (let i = 0; ; i++) {
+    try { return await fn(); }
+    catch (e) {
+      if (i >= 8) throw e;
+      const wait = Math.min(8000, 400 * 2 ** i);
+      say(`${label}: ${e.message}. Retrying in ${(wait / 1000).toFixed(1)} s…`, 'warn');
+      await sleep(wait);
+    }
+  }
+}
+async function upload(file) {
+  if (!window.crypto || !crypto.subtle) { say('This browser blocks SHA-256 here; open the page over HTTPS.', 'bad'); return; }
+  busy = true; $('up-btn').disabled = true;
+  try {
+    say('Computing SHA-256 of the file…');
+    const all = await file.arrayBuffer();
+    const digest = await sha(all);
+    const s = await withRetry(async () => {
+      const r = await fetch('/api/uploads', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ filename: file.name, size: file.size, sha256: digest, client_meta: { client: 'browser' } }) });
+      if (!r.ok) throw new Error((await r.json()).error || r.status);
+      return r.json();
+    }, 'Starting upload');
+    let off = s.offset, chunk = 512 * 1024, retries = 0;
+    while (off < file.size) {
+      const part = all.slice(off, Math.min(off + chunk, file.size));
+      const ctrl = new AbortController(); const t = setTimeout(() => ctrl.abort(), 30000);
+      try {
+        const r = await fetch(`/api/uploads/${s.id}`, { method: 'PATCH', signal: ctrl.signal,
+          headers: { 'Upload-Offset': String(off), 'Chunk-SHA256': await sha(part), 'Content-Type': 'application/offset+octet-stream' },
+          body: part });
+        const j = await r.json();
+        if (r.ok) { off = j.offset; chunk = Math.min(2 * 1024 * 1024, chunk + 256 * 1024); }
+        else if (j.offset !== undefined) { off = j.offset; retries++; }
+        else throw new Error(j.error || r.status);
+      } catch (e) {
+        retries++; chunk = Math.max(64 * 1024, chunk / 2);
+        say(`Chunk failed (${e.name === 'AbortError' ? 'timeout' : e.message}). Resuming…`, 'warn');
+        await sleep(Math.min(8000, 300 * 2 ** Math.min(retries, 5)));
+        off = await withRetry(async () => {
+          const h = await fetch(`/api/uploads/${s.id}`, { method: 'HEAD' });
+          if (!h.ok) throw new Error(h.status);
+          return Number(h.headers.get('Upload-Offset'));
+        }, 'Checking server offset');
+      } finally { clearTimeout(t); }
+      $('up-bar').value = off / file.size;
+      say(`Uploaded ${(off / 1048576).toFixed(1)} of ${(file.size / 1048576).toFixed(1)} MB${retries ? ` · ${retries} retries` : ''}`);
+    }
+    say('All bytes received. Verifying SHA-256 and analysing frames…');
+    const done = await withRetry(async () => {
+      const r = await fetch(`/api/uploads/${s.id}/complete`, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ client_meta: { client: 'browser', retries } }) });
+      const j = await r.json();
+      if (r.status >= 500) throw new Error(r.status);
+      return j;
+    }, 'Finishing');
+    if (done.state === 'verified' && done.server_sha256 === digest) {
+      say('Verified byte-for-byte. Opening the integrity report…', 'ok');
+      location.href = done.report_url;
+    } else {
+      say(`Upload rejected: ${done.state_detail || done.error || done.state}`, 'bad');
+    }
+  } catch (e) { say(`Upload failed: ${e.message}`, 'bad'); }
+  finally { busy = false; $('up-btn').disabled = false; }
+}
+$('up-file').addEventListener('change', () => { $('up-btn').disabled = !$('up-file').files.length; });
+$('up-btn').addEventListener('click', () => { const f = $('up-file').files[0]; if (f) upload(f); });
+"""
+
+
+def dashboard(sessions, max_mb=None):
     rows = []
     for s in sessions:
         st = s.get("state_detail", "") if s["state"] == "uploading" else ""
         v = s.get("verdict") or ""
         link = f"<a href='/reports/{s['id']}'>report</a>" if v else ""
-        rows.append(f"<tr><td><code>{s['id'][:8]}</code></td><td>{e(s['filename'])}</td>"
+        note = f"<div class=mute style='font-size:12px'>{e(s['note'])}</div>" if s.get("note") else ""
+        rows.append(f"<tr><td><code>{s['id'][:8]}</code></td><td>{e(s['filename'])}{note}</td>"
                     f"<td>{s['size']:,}</td><td>{s['progress'] * 100:.0f}%</td>"
                     f"<td><span class='tag {VCLS.get(s['state'], '')}'>{e(s['state'])}</span> "
                     f"<span class='mute'>{e(st)}</span></td>"
                     f"<td>{s['chunks_ok']} / <span class='{'bad' if s['chunks_rejected'] else 'mute'}'>"
                     f"{s['chunks_rejected']}</span></td>"
                     f"<td><span class='tag {VCLS.get(v, '')}'>{e(v)}</span></td><td>{link}</td></tr>")
+    limit = f" Up to {max_mb} MB." if max_mb else ""
     body = (
         "<h1>Video integrity backend</h1><p class=mute>Resumable uploads → SHA-256 verification → 30 FPS frame "
-        "analysis. Auto-refreshes every 3 s.</p><div class='card wrap'><table><tr><th>ID</th><th>File</th>"
+        "analysis. Rows marked “Test run” come from the automated network-fault test suite. "
+        "<a href='https://github.com/sarthakmehtaiit/nsepia-video-integrity'>Source on GitHub</a></p>"
+        "<div class=card><b>Upload a video</b><p class=mute style='margin:4px 0 10px'>Sent in SHA-256-checked chunks "
+        f"that resume after any network drop, then analysed at 30 FPS.{limit}</p>"
+        "<div style='display:flex;gap:10px;flex-wrap:wrap;align-items:center'>"
+        "<input id=up-file type=file accept='video/*,.mp4,.mov,.mkv,.webm,.avi' style='min-width:0;max-width:100%'>"
+        "<button id=up-btn disabled>Upload and analyse</button></div>"
+        "<progress id=up-bar value=0 max=1 style='width:100%;margin-top:10px'></progress>"
+        "<div id=up-status class=mute>Choose a video file.</div></div>"
+        "<div class='card wrap'><table><tr><th>ID</th><th>File</th>"
         "<th>Bytes</th><th>Recv</th><th>Transfer</th><th>Chunks ok / rejected</th><th>Verdict</th><th></th></tr>"
         + ("".join(rows) or "<tr><td colspan=8 class=mute>No uploads yet.</td></tr>") +
-        "</table></div><script>setTimeout(()=>location.reload(),3000)</script>")
+        f"</table></div><script>{UPLOAD_JS}</script>")
     return page("Video Integrity", body)
 
 

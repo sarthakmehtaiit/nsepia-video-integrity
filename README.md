@@ -32,6 +32,12 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 The last command runs all 13 scenarios (about 10 minutes; on a Mac, prefix it with `caffeinate -i` so sleep doesn't freeze the run). It writes `evidence/RESULTS.md`, the per-scenario logs in `evidence/logs/` and the integrity reports in `evidence/reports/` (JSON and HTML).
 
+### Deploy (Render, free tier)
+
+The repo includes a [render.yaml](render.yaml) blueprint. On render.com, click **New → Blueprint** and pick this repo. Render installs `requirements.txt` and starts `python server/server.py`. The server binds to Render's `PORT` and loads the committed test-run reports as demo rows (`SEED_DEMO=1`). Visitors can also upload their own video from the dashboard: the browser sends it in SHA-256-checked chunks that resume after network drops.
+
+The free instance sleeps when idle, so the first visit takes about 30 seconds. Uploaded files are lost whenever it restarts. The network-impairment proxy and test suite are meant to run locally.
+
 ### Manual demo (three terminals)
 
 ```bash

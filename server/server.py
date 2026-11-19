@@ -32,7 +32,8 @@ import report_html  # noqa: E402
 
 DATA = os.environ.get("VI_DATA", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data"))
 MAX_CHUNK = 8 * 1024 * 1024
-MAX_FILE = 2 * 1024 * 1024 * 1024
+MAX_FILE = int(os.environ.get("MAX_UPLOAD_MB", "2048")) * 1024 * 1024
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STALL_SECONDS = 20
 READ_TIMEOUT = 15  # socket read timeout: a stalled body is abandoned, never half-committed
 
@@ -150,7 +151,7 @@ class H(BaseHTTPRequestHandler):
     def do_GET(self):
         p, uid, sub = self.route()
         if p in ("", "/"):
-            return self.send_bytes(200, report_html.dashboard(all_sessions()).encode(), "text/html; charset=utf-8")
+            return self.send_bytes(200, report_html.dashboard(all_sessions(), MAX_FILE // (1024 * 1024)).encode(), "text/html; charset=utf-8")
         if p == "/api/uploads":
             return self.send_json(200, all_sessions())
         if p == "/api/health":
@@ -202,9 +203,12 @@ class H(BaseHTTPRequestHandler):
         try:
             req = json.loads(raw)
             size, sha = int(req["size"]), str(req["sha256"]).lower()
-            assert 0 < size <= MAX_FILE and re.fullmatch(r"[0-9a-f]{64}", sha)
+            assert 0 < size and re.fullmatch(r"[0-9a-f]{64}", sha)
         except Exception:  # noqa: BLE001
             return self.send_json(400, {"error": "need filename, size (bytes) and sha256 (hex)"})
+        if size > MAX_FILE:
+            return self.send_json(413, {"error": f"file is {size / 1048576:.0f} MB; this server accepts up to "
+                                                 f"{MAX_FILE // 1048576} MB"})
         with LOCK:
             for s in all_sessions():  # resume an in-progress upload of the same file
                 if s["sha256"] == sha and s["size"] == size and s["state"] == "uploading":
@@ -346,6 +350,48 @@ class Server(ThreadingHTTPServer):
         log(f"connection error from {client_address[0]}:{client_address[1]}: {type(e).__name__}")
 
 
+def seed_from_evidence():
+    """Load the committed test-run results as read-only demo uploads (used on a fresh deploy).
+
+    These are the real reports produced by tests/run_scenarios.py over the impaired network,
+    so a visitor sees retries, path switches and anomaly reports without re-running anything.
+    """
+    ev = os.path.join(ROOT, "evidence")
+    rp = os.path.join(ev, "results.json")
+    if not os.path.exists(rp):
+        return 0
+    n = 0
+    for r in json.load(open(rp)):
+        res = r.get("result", {})
+        uid, key = res.get("upload_id"), r["key"]
+        rep_path = os.path.join(ev, "reports", f"{key}.json")
+        if not uid or not os.path.exists(rep_path) or load(uid):
+            continue
+        rep = json.load(open(rep_path))
+        tr = rep.get("transfer", {})
+        d = sess_dir(uid)
+        os.makedirs(d, exist_ok=True)
+        with open(os.path.join(d, "report.json"), "w") as f:
+            json.dump(rep, f)
+        th = os.path.join(ev, "reports", "thumbs", key)
+        if os.path.isdir(th):
+            os.makedirs(os.path.join(d, "thumbs"), exist_ok=True)
+            for fn in os.listdir(th):
+                with open(os.path.join(th, fn), "rb") as a, open(os.path.join(d, "thumbs", fn), "wb") as b:
+                    b.write(a.read())
+        now = time.time() - 60 * n
+        save({"id": uid, "filename": os.path.basename(res.get("file", "video.mp4")), "size": res.get("size", 0),
+              "sha256": res.get("sha256", ""), "server_sha256": tr.get("server_sha256"), "offset": res.get("size", 0),
+              "state": "verified", "state_detail": "byte-for-byte match (size + SHA-256)",
+              "note": f"Test run: {r['title']}", "created": now, "last_activity": now,
+              "chunks_ok": tr.get("chunks_ok", 0), "chunks_rejected": tr.get("chunks_rejected", 0),
+              "duplicate_chunks": tr.get("duplicate_chunks", 0), "offset_conflicts": tr.get("offset_conflicts", 0),
+              "client_meta": tr.get("client_meta", {}), "events": [], "verdict": rep.get("verdict"),
+              "anomaly_counts": rep.get("anomaly_counts", {}), "duration_s": tr.get("upload_seconds")})
+        n += 1
+    return n
+
+
 def serve(host="127.0.0.1", port=8000):
     os.makedirs(os.path.join(DATA, "uploads"), exist_ok=True)
     srv = Server((host, port), H)
@@ -357,7 +403,13 @@ def serve(host="127.0.0.1", port=8000):
 if __name__ == "__main__":
     import argparse
     ap = argparse.ArgumentParser()
-    ap.add_argument("--host", default="127.0.0.1")
-    ap.add_argument("--port", type=int, default=8000)
+    # On a host like Render, PORT is set and the server must listen on all interfaces.
+    ap.add_argument("--host", default=os.environ.get("HOST", "0.0.0.0" if "PORT" in os.environ else "127.0.0.1"))
+    ap.add_argument("--port", type=int, default=int(os.environ.get("PORT", 8000)))
+    ap.add_argument("--seed-demo", action="store_true", default=os.environ.get("SEED_DEMO") == "1",
+                    help="load the committed test-run reports as demo uploads")
     a = ap.parse_args()
-    serve(a.host, a.port).serve_forever()
+    srv = serve(a.host, a.port)
+    if a.seed_demo:
+        log(f"seeded {seed_from_evidence()} demo uploads from evidence/")
+    srv.serve_forever()

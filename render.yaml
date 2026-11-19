@@ -1,0 +1,16 @@
+# Render Blueprint: New -> Blueprint -> pick this repo.
+services:
+  - type: web
+    name: nsepia-video-integrity
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server/server.py
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: SEED_DEMO          # show the committed test-run reports on the dashboard
+        value: "1"
+      - key: MAX_UPLOAD_MB      # keep uploads small enough for the free instance
+        value: "100"
