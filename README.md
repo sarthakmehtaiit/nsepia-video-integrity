@@ -2,6 +2,8 @@
 
 nSEPIA technical challenge (Confluentia 2026, IIT BHU). This project sends a 30-second video from a client to a backend over a network whose strength changes between 20% and 100%. The backend accepts the file only after it proves the bytes arrived complete and unchanged. It then decodes the video, samples it at 30 FPS and reports frame-level anomalies, along with the evidence for each finding.
 
+**Live demo: https://nsepia-video-integrity.onrender.com**. Browse the integrity reports from the automated network-fault tests, or upload your own video and get its report. The site runs on Render's free plan, so the first visit after it has been idle takes about 30 seconds to wake up.
+
 ```
  ┌──────────────┐  PATCH chunks + SHA-256   ┌──────────────────┐  TCP   ┌───────────────────────────────┐
  │ client/      │ ────────────────────────► │ netsim/proxy.py  │ ─────► │ server/server.py              │
