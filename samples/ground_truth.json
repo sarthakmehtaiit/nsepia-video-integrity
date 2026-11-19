@@ -1,0 +1,60 @@
+{
+  "clean_30fps.mp4": {
+    "expected": "no anomalies"
+  },
+  "dropped_frames.mp4": {
+    "missing_source_frames": [
+      300,
+      301,
+      302,
+      303,
+      304,
+      600,
+      750,
+      751,
+      752,
+      753,
+      754,
+      755,
+      756,
+      757,
+      758,
+      759
+    ],
+    "at_seconds": [
+      10.0,
+      20.0,
+      25.0
+    ]
+  },
+  "duplicated_frames.mp4": {
+    "duplicated_slots": [
+      450,
+      451,
+      452,
+      453,
+      454,
+      455,
+      810
+    ]
+  },
+  "source_24fps.mp4": {
+    "expected": "no source anomalies; ~180 conversion duplicates at 30 FPS"
+  },
+  "capture_stall_vfr.mp4": {
+    "stall_after_frame": 400,
+    "stall_seconds": 0.5
+  },
+  "truncated.mp4": {
+    "kept_bytes_fraction": 0.55
+  },
+  "altered.mp4": {
+    "bit_flipped_regions_at_byte_fraction": [
+      0.3,
+      0.62
+    ]
+  },
+  "invalid.mp4": {
+    "expected": "not a video"
+  }
+}

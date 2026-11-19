@@ -1,0 +1,564 @@
+[
+  {
+    "key": "stable",
+    "title": "Stable connection (100%)",
+    "pass": true,
+    "seconds": 11.3,
+    "result": {
+      "file": "./samples/clean_30fps.mp4",
+      "size": 10634479,
+      "sha256": "df7d732f3643aee8fc7e3380bb38d6c09c51c169d4c8afc7f519890deb0f397a",
+      "upload_id": "6eb4de9c67974c879e5c45707a697019",
+      "resumed_from": 0,
+      "status": "SUCCESS",
+      "server_state": "verified",
+      "server_detail": "byte-for-byte match (size + SHA-256)",
+      "server_sha256": "df7d732f3643aee8fc7e3380bb38d6c09c51c169d4c8afc7f519890deb0f397a",
+      "verdict": "VALID_NO_ANOMALIES",
+      "anomaly_counts": {},
+      "report_url": "http://127.0.0.1:9101/reports/6eb4de9c67974c879e5c45707a697019",
+      "seconds": 11.27,
+      "metrics": {
+        "retries": 0,
+        "timeouts": 0,
+        "conn_errors": 0,
+        "hash_rejects": 0,
+        "offset_resyncs": 0,
+        "path_switches": 0,
+        "chunks_sent": 13,
+        "bytes_sent": 10634479,
+        "duplicate_acks": 0
+      },
+      "final_endpoint": "http://127.0.0.1:9101",
+      "netsim": {
+        "wired": {
+          "profile": "stable",
+          "stats": {
+            "connections": 15,
+            "bytes_up": 10638866,
+            "stalls": 0,
+            "resets": 0,
+            "corrupted": 0,
+            "outage_kills": 0,
+            "refused_in_outage": 0
+          },
+          "strength_min": 1.0,
+          "strength_max": 1.0
+        }
+      }
+    }
+  },
+  {
+    "key": "variable",
+    "title": "Variable signal 20\u2013100%",
+    "pass": true,
+    "seconds": 82.2,
+    "result": {
+      "file": "./samples/dropped_frames.mp4",
+      "size": 10648976,
+      "sha256": "0d2e12e3ff5f7426239dc50962a8703907fc02491336af7ccf237dca6eb52b68",
+      "upload_id": "1f34e2a6b72c498ba176c3efb4f4787f",
+      "resumed_from": 0,
+      "status": "SUCCESS",
+      "server_state": "verified",
+      "server_detail": "byte-for-byte match (size + SHA-256)",
+      "server_sha256": "0d2e12e3ff5f7426239dc50962a8703907fc02491336af7ccf237dca6eb52b68",
+      "verdict": "VALID_WITH_FRAME_ANOMALIES",
+      "anomaly_counts": {
+        "missing_source_frames": 3,
+        "timestamp_gap": 3,
+        "abrupt_change": 2
+      },
+      "report_url": "http://127.0.0.1:9102/reports/1f34e2a6b72c498ba176c3efb4f4787f",
+      "seconds": 82.2,
+      "metrics": {
+        "retries": 11,
+        "timeouts": 6,
+        "conn_errors": 5,
+        "hash_rejects": 0,
+        "offset_resyncs": 0,
+        "path_switches": 0,
+        "chunks_sent": 33,
+        "bytes_sent": 10648976,
+        "duplicate_acks": 0
+      },
+      "final_endpoint": "http://127.0.0.1:9102",
+      "netsim": {
+        "mobile": {
+          "profile": "variable",
+          "stats": {
+            "connections": 57,
+            "bytes_up": 14199298,
+            "stalls": 8,
+            "resets": 3,
+            "corrupted": 0,
+            "outage_kills": 0,
+            "refused_in_outage": 0
+          },
+          "strength_min": 0.2,
+          "strength_max": 1.0
+        }
+      }
+    }
+  },
+  {
+    "key": "interrupt",
+    "title": "Temporary interruptions, timeouts, reconnection",
+    "pass": true,
+    "seconds": 63.0,
+    "result": {
+      "file": "./samples/duplicated_frames.mp4",
+      "size": 10572632,
+      "sha256": "4a8b2dd9d2ae6810c633192ef4267ff9cd7d599d37bd6c2305822257f5803624",
+      "upload_id": "8c361973a889488f80c04b5275203f80",
+      "resumed_from": 0,
+      "status": "SUCCESS",
+      "server_state": "verified",
+      "server_detail": "byte-for-byte match (size + SHA-256)",
+      "server_sha256": "4a8b2dd9d2ae6810c633192ef4267ff9cd7d599d37bd6c2305822257f5803624",
+      "verdict": "VALID_WITH_FRAME_ANOMALIES",
+      "anomaly_counts": {
+        "missing_source_frames": 2,
+        "duplicated_source_frame": 2,
+        "abrupt_change": 1
+      },
+      "report_url": "http://127.0.0.1:9103/reports/8c361973a889488f80c04b5275203f80",
+      "seconds": 63.01,
+      "metrics": {
+        "retries": 10,
+        "timeouts": 4,
+        "conn_errors": 6,
+        "hash_rejects": 0,
+        "offset_resyncs": 0,
+        "path_switches": 0,
+        "chunks_sent": 30,
+        "bytes_sent": 10572632,
+        "duplicate_acks": 0
+      },
+      "final_endpoint": "http://127.0.0.1:9103",
+      "netsim": {
+        "flaky": {
+          "profile": "interrupt",
+          "stats": {
+            "connections": 48,
+            "bytes_up": 12466969,
+            "stalls": 5,
+            "resets": 3,
+            "corrupted": 0,
+            "outage_kills": 1,
+            "refused_in_outage": 2
+          },
+          "strength_min": 0.2,
+          "strength_max": 1.0
+        }
+      }
+    }
+  },
+  {
+    "key": "switching",
+    "title": "Connection switching Wi-Fi \u2192 cellular",
+    "pass": true,
+    "seconds": 71.7,
+    "result": {
+      "file": "./samples/capture_stall_vfr.mp4",
+      "size": 10010534,
+      "sha256": "b95b0693cd582e29620cec60d07716852b2d37c1e72b4fd8311984f4914661c4",
+      "upload_id": "8a5f887c00a646978c9a7112e767e7a1",
+      "resumed_from": 0,
+      "status": "SUCCESS",
+      "server_state": "verified",
+      "server_detail": "byte-for-byte match (size + SHA-256)",
+      "server_sha256": "b95b0693cd582e29620cec60d07716852b2d37c1e72b4fd8311984f4914661c4",
+      "verdict": "VALID_WITH_FRAME_ANOMALIES",
+      "anomaly_counts": {
+        "timestamp_gap": 1,
+        "abrupt_change": 1
+      },
+      "report_url": "http://127.0.0.1:9105/reports/8a5f887c00a646978c9a7112e767e7a1",
+      "seconds": 71.64,
+      "metrics": {
+        "retries": 10,
+        "timeouts": 3,
+        "conn_errors": 7,
+        "hash_rejects": 0,
+        "offset_resyncs": 0,
+        "path_switches": 1,
+        "chunks_sent": 29,
+        "bytes_sent": 10010534,
+        "duplicate_acks": 0
+      },
+      "final_endpoint": "http://127.0.0.1:9105",
+      "netsim": {
+        "wifi": {
+          "profile": "wifi_dies",
+          "stats": {
+            "connections": 9,
+            "bytes_up": 2623137,
+            "stalls": 0,
+            "resets": 0,
+            "corrupted": 0,
+            "outage_kills": 0,
+            "refused_in_outage": 0
+          },
+          "strength_min": 1.0,
+          "strength_max": 1.0
+        },
+        "cellular": {
+          "profile": "cellular",
+          "stats": {
+            "connections": 40,
+            "bytes_up": 9101225,
+            "stalls": 4,
+            "resets": 3,
+            "corrupted": 0,
+            "outage_kills": 0,
+            "refused_in_outage": 0
+          },
+          "strength_min": 0.2,
+          "strength_max": 1.0
+        }
+      }
+    }
+  },
+  {
+    "key": "hostile",
+    "title": "Fluctuating speed + resets + in-flight corruption",
+    "pass": true,
+    "seconds": 267.7,
+    "result": {
+      "file": "./samples/source_24fps.mp4",
+      "size": 10769529,
+      "sha256": "8f3b7b68c11487e68fcdb082bfa398bc3dfe134852c7eee5cd92bf05832bf8c8",
+      "upload_id": "c43aad203365465e9f4b61b850c628be",
+      "resumed_from": 0,
+      "status": "SUCCESS",
+      "server_state": "verified",
+      "server_detail": "byte-for-byte match (size + SHA-256)",
+      "server_sha256": "8f3b7b68c11487e68fcdb082bfa398bc3dfe134852c7eee5cd92bf05832bf8c8",
+      "verdict": "VALID_NO_ANOMALIES",
+      "anomaly_counts": {},
+      "report_url": "http://127.0.0.1:9106/reports/c43aad203365465e9f4b61b850c628be",
+      "seconds": 267.68,
+      "metrics": {
+        "retries": 88,
+        "timeouts": 16,
+        "conn_errors": 72,
+        "hash_rejects": 51,
+        "offset_resyncs": 0,
+        "path_switches": 0,
+        "chunks_sent": 85,
+        "bytes_sent": 10769529,
+        "duplicate_acks": 0
+      },
+      "final_endpoint": "http://127.0.0.1:9106",
+      "netsim": {
+        "hostile": {
+          "profile": "hostile",
+          "stats": {
+            "connections": 260,
+            "bytes_up": 23833810,
+            "stalls": 17,
+            "resets": 19,
+            "corrupted": 74,
+            "outage_kills": 0,
+            "refused_in_outage": 1
+          },
+          "strength_min": 0.2,
+          "strength_max": 1.0
+        }
+      }
+    }
+  },
+  {
+    "key": "crash_resume",
+    "title": "Client crash at 40% then resume",
+    "pass": true,
+    "seconds": 120.4,
+    "result": {
+      "file": "./samples/clean_30fps.mp4",
+      "size": 10634479,
+      "sha256": "df7d732f3643aee8fc7e3380bb38d6c09c51c169d4c8afc7f519890deb0f397a",
+      "upload_id": "9737099cba0c49debef4cee7dddc8768",
+      "resumed_from": 4288208,
+      "status": "SUCCESS",
+      "server_state": "verified",
+      "server_detail": "byte-for-byte match (size + SHA-256)",
+      "server_sha256": "df7d732f3643aee8fc7e3380bb38d6c09c51c169d4c8afc7f519890deb0f397a",
+      "verdict": "VALID_NO_ANOMALIES",
+      "anomaly_counts": {},
+      "report_url": "http://127.0.0.1:9107/reports/9737099cba0c49debef4cee7dddc8768",
+      "seconds": 49.94,
+      "metrics": {
+        "retries": 6,
+        "timeouts": 2,
+        "conn_errors": 4,
+        "hash_rejects": 0,
+        "offset_resyncs": 0,
+        "path_switches": 0,
+        "chunks_sent": 27,
+        "bytes_sent": 6346271,
+        "duplicate_acks": 0
+      },
+      "final_endpoint": "http://127.0.0.1:9107",
+      "netsim": {
+        "mobile": {
+          "profile": "variable",
+          "stats": {
+            "connections": 41,
+            "bytes_up": 6797734,
+            "stalls": 3,
+            "resets": 3,
+            "corrupted": 0,
+            "outage_kills": 0,
+            "refused_in_outage": 0
+          },
+          "strength_min": 0.2,
+          "strength_max": 1.0
+        }
+      },
+      "first_attempt": {
+        "status": "CRASHED",
+        "error": "SIMULATED CLIENT CRASH at 4,288,208 bytes",
+        "bytes_confirmed": 4288208,
+        "upload_id": "9737099cba0c49debef4cee7dddc8768"
+      }
+    }
+  },
+  {
+    "key": "stall_detect",
+    "title": "Dead network: stall must be reported, not success",
+    "pass": true,
+    "seconds": 19.2,
+    "result": {
+      "file": "./samples/clean_30fps.mp4",
+      "size": 10634479,
+      "sha256": "df7d732f3643aee8fc7e3380bb38d6c09c51c169d4c8afc7f519890deb0f397a",
+      "upload_id": "68cd8b9bc34e496ab300825f2f0430d1",
+      "resumed_from": 0,
+      "status": "STALLED",
+      "error": "STALLED: no progress for 17s at 2621440/10634479 bytes",
+      "bytes_confirmed": 2621440,
+      "seconds": 19.15,
+      "metrics": {
+        "retries": 3,
+        "timeouts": 1,
+        "conn_errors": 2,
+        "hash_rejects": 0,
+        "offset_resyncs": 0,
+        "path_switches": 0,
+        "chunks_sent": 5,
+        "bytes_sent": 2621440,
+        "duplicate_acks": 0
+      },
+      "final_endpoint": "http://127.0.0.1:9108",
+      "netsim": {
+        "dead": {
+          "profile": "wifi_dies",
+          "stats": {
+            "connections": 9,
+            "bytes_up": 2623131,
+            "stalls": 0,
+            "resets": 0,
+            "corrupted": 0,
+            "outage_kills": 0,
+            "refused_in_outage": 0
+          },
+          "strength_min": 1.0,
+          "strength_max": 1.0
+        }
+      }
+    }
+  },
+  {
+    "key": "altered",
+    "title": "Altered (bit-flipped) video",
+    "pass": true,
+    "seconds": 91.4,
+    "result": {
+      "file": "./samples/altered.mp4",
+      "size": 10634479,
+      "sha256": "1954ef8e82279fdcaa4aa15cf991b7131f16936b85b48438c77370e1e12a1045",
+      "upload_id": "35aa4da63aa24332a43e83dc500716f3",
+      "resumed_from": 0,
+      "status": "SUCCESS",
+      "server_state": "verified",
+      "server_detail": "byte-for-byte match (size + SHA-256)",
+      "server_sha256": "1954ef8e82279fdcaa4aa15cf991b7131f16936b85b48438c77370e1e12a1045",
+      "verdict": "DAMAGED_VIDEO",
+      "anomaly_counts": {
+        "decode_error": 2
+      },
+      "report_url": "http://127.0.0.1:9110/reports/35aa4da63aa24332a43e83dc500716f3",
+      "seconds": 91.39,
+      "metrics": {
+        "retries": 18,
+        "timeouts": 6,
+        "conn_errors": 12,
+        "hash_rejects": 0,
+        "offset_resyncs": 0,
+        "path_switches": 0,
+        "chunks_sent": 35,
+        "bytes_sent": 10634479,
+        "duplicate_acks": 0
+      },
+      "final_endpoint": "http://127.0.0.1:9110",
+      "netsim": {
+        "mobile": {
+          "profile": "variable",
+          "stats": {
+            "connections": 72,
+            "bytes_up": 13334071,
+            "stalls": 8,
+            "resets": 10,
+            "corrupted": 0,
+            "outage_kills": 0,
+            "refused_in_outage": 0
+          },
+          "strength_min": 0.2,
+          "strength_max": 1.0
+        }
+      }
+    }
+  },
+  {
+    "key": "truncated",
+    "title": "Truncated video",
+    "pass": true,
+    "seconds": 57.6,
+    "result": {
+      "file": "./samples/truncated.mp4",
+      "size": 5848963,
+      "sha256": "3ea4b42732f1c2cd13bc0b7e13109aaf02631d10fb46cad424b4309f41e21dd5",
+      "upload_id": "320b9769552f429ebeeaee283de8545f",
+      "resumed_from": 0,
+      "status": "SUCCESS",
+      "server_state": "verified",
+      "server_detail": "byte-for-byte match (size + SHA-256)",
+      "server_sha256": "3ea4b42732f1c2cd13bc0b7e13109aaf02631d10fb46cad424b4309f41e21dd5",
+      "verdict": "DAMAGED_VIDEO",
+      "anomaly_counts": {
+        "corrupt_packets": 1,
+        "frame_count_mismatch": 1,
+        "early_end": 1,
+        "decode_error": 1
+      },
+      "report_url": "http://127.0.0.1:9110/reports/320b9769552f429ebeeaee283de8545f",
+      "seconds": 57.61,
+      "metrics": {
+        "retries": 11,
+        "timeouts": 2,
+        "conn_errors": 9,
+        "hash_rejects": 0,
+        "offset_resyncs": 0,
+        "path_switches": 0,
+        "chunks_sent": 21,
+        "bytes_sent": 5848963,
+        "duplicate_acks": 0
+      },
+      "final_endpoint": "http://127.0.0.1:9110",
+      "netsim": {
+        "mobile": {
+          "profile": "variable",
+          "stats": {
+            "connections": 45,
+            "bytes_up": 7380586,
+            "stalls": 4,
+            "resets": 7,
+            "corrupted": 0,
+            "outage_kills": 0,
+            "refused_in_outage": 0
+          },
+          "strength_min": 0.2,
+          "strength_max": 1.0
+        }
+      }
+    }
+  },
+  {
+    "key": "invalid",
+    "title": "Invalid (non-video) file",
+    "pass": true,
+    "seconds": 12.2,
+    "result": {
+      "file": "./samples/invalid.mp4",
+      "size": 524288,
+      "sha256": "c0bd564cbe3e30cbe64587748f78c3764c60e9b0582486ac4fa2f5472782723e",
+      "upload_id": "2886f90b0c134a55bae007d1573974fb",
+      "resumed_from": 0,
+      "status": "SUCCESS",
+      "server_state": "verified",
+      "server_detail": "byte-for-byte match (size + SHA-256)",
+      "server_sha256": "c0bd564cbe3e30cbe64587748f78c3764c60e9b0582486ac4fa2f5472782723e",
+      "verdict": "INVALID_VIDEO",
+      "anomaly_counts": {
+        "unparseable_container": 1
+      },
+      "report_url": "http://127.0.0.1:9110/reports/2886f90b0c134a55bae007d1573974fb",
+      "seconds": 12.19,
+      "metrics": {
+        "retries": 3,
+        "timeouts": 0,
+        "conn_errors": 3,
+        "hash_rejects": 0,
+        "offset_resyncs": 0,
+        "path_switches": 0,
+        "chunks_sent": 4,
+        "bytes_sent": 524288,
+        "duplicate_acks": 0
+      },
+      "final_endpoint": "http://127.0.0.1:9110",
+      "netsim": {
+        "mobile": {
+          "profile": "variable",
+          "stats": {
+            "connections": 12,
+            "bytes_up": 985156,
+            "stalls": 1,
+            "resets": 2,
+            "corrupted": 0,
+            "outage_kills": 0,
+            "refused_in_outage": 0
+          },
+          "strength_min": 0.2,
+          "strength_max": 1.0
+        }
+      }
+    }
+  },
+  {
+    "key": "reject_incomplete",
+    "title": "Server refuses to complete a partial upload",
+    "pass": true,
+    "seconds": 0.0,
+    "result": {
+      "complete_status": 409,
+      "response": {
+        "error": "upload incomplete \u2014 refusing to accept",
+        "offset": 100000,
+        "size": 300000,
+        "missing_bytes": 200000
+      }
+    }
+  },
+  {
+    "key": "reject_hash",
+    "title": "Server rejects whole-file SHA-256 mismatch",
+    "pass": true,
+    "seconds": 0.0,
+    "result": {
+      "complete_status": 422,
+      "state": "rejected",
+      "detail": "whole-file SHA-256 mismatch: stored bytes differ from the client's file"
+    }
+  },
+  {
+    "key": "reject_chunk",
+    "title": "Server rejects corrupted chunk",
+    "pass": true,
+    "seconds": 0.0,
+    "result": {
+      "patch_status": 422,
+      "server_offset_after": 0
+    }
+  }
+]

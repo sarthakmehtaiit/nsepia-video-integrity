@@ -1,0 +1,200 @@
+{
+  "file": "video.mp4",
+  "size_bytes": 10572632,
+  "sha256": "4a8b2dd9d2ae6810c633192ef4267ff9cd7d599d37bd6c2305822257f5803624",
+  "transfer": {
+    "status": "verified",
+    "client_sha256": "4a8b2dd9d2ae6810c633192ef4267ff9cd7d599d37bd6c2305822257f5803624",
+    "server_sha256": "4a8b2dd9d2ae6810c633192ef4267ff9cd7d599d37bd6c2305822257f5803624",
+    "size": 10572632,
+    "chunks_ok": 30,
+    "chunks_rejected": 8,
+    "duplicate_chunks": 0,
+    "offset_conflicts": 0,
+    "upload_seconds": 59.71,
+    "client_meta": {
+      "retries": 10,
+      "timeouts": 4,
+      "conn_errors": 6,
+      "hash_rejects": 0,
+      "offset_resyncs": 0,
+      "path_switches": 0,
+      "chunks_sent": 30,
+      "bytes_sent": 10572632,
+      "duplicate_acks": 0,
+      "client_seconds": 59.92
+    }
+  },
+  "validation": {
+    "container_sniff": "iso-bmff (mp4/mov)",
+    "opened": true,
+    "errors": [],
+    "warnings": []
+  },
+  "stream": {
+    "codec": "h264",
+    "width": 640,
+    "height": 360,
+    "pix_fmt": "yuv420p",
+    "time_base": "1/12000",
+    "nominal_fps": 30.0,
+    "declared_frames": 900,
+    "declared_duration_s": 30.0,
+    "container_format": "mov,mp4,m4a,3gp,3g2,mj2",
+    "bit_rate": 2819368
+  },
+  "decode": {
+    "packets_read": 900,
+    "corrupt_packets_flagged": 0,
+    "frames_decoded": 900,
+    "decode_errors": 0,
+    "decode_error_samples": [],
+    "first_pts_s": 0.0,
+    "last_pts_s": 29.9667,
+    "timestamps": {
+      "expected_interval_ms": 33.333,
+      "median_interval_ms": 33.333,
+      "jitter_std_ms": 0.0,
+      "min_interval_ms": 33.333,
+      "max_interval_ms": 33.333,
+      "measured_fps": 30.0,
+      "is_vfr": false
+    },
+    "reference_counter": {
+      "present": true,
+      "readable_frames": 900
+    },
+    "content": {
+      "median_frame_diff": 4.46,
+      "diff_mad": 0.378
+    }
+  },
+  "frames_30fps": {
+    "target_fps": 30,
+    "grid_frames": 900,
+    "source_frames": 900,
+    "grid_slots_repeating_previous_source_frame": 0,
+    "source_frames_not_sampled": 0,
+    "note": "Repeats/omissions here are caused by converting the source timeline to a 30 FPS grid and are NOT anomalies by themselves. A repeat counts as an anomaly only if the source timeline also shows a gap (see timing/source anomalies)."
+  },
+  "anomalies": [
+    {
+      "layer": "source",
+      "type": "missing_source_frames",
+      "severity": "high",
+      "t_start_s": 15.1667,
+      "t_end_s": 15.2,
+      "detail": "Source frames #450\u2013#455 (6) are absent between frames 455 and 456.",
+      "evidence": [
+        "reference counter jump",
+        "PTS regular (frames dropped before encode, timeline re-packed)"
+      ],
+      "likely_origin": "capture / encoding (never in file)",
+      "confidence": "confirmed (reference counter)",
+      "frames": [
+        455,
+        456
+      ],
+      "missing_frames": 6
+    },
+    {
+      "layer": "source",
+      "type": "missing_source_frames",
+      "severity": "high",
+      "t_start_s": 27.0,
+      "t_end_s": 27.0333,
+      "detail": "Source frames #810\u2013#810 (1) are absent between frames 810 and 811.",
+      "evidence": [
+        "reference counter jump",
+        "PTS regular (frames dropped before encode, timeline re-packed)"
+      ],
+      "likely_origin": "capture / encoding (never in file)",
+      "confidence": "confirmed (reference counter)",
+      "frames": [
+        810,
+        811
+      ],
+      "missing_frames": 1
+    },
+    {
+      "layer": "source",
+      "type": "duplicated_source_frame",
+      "severity": "medium",
+      "t_start_s": 14.9667,
+      "t_end_s": 15.1667,
+      "detail": "Frames 450\u2013455 repeat source frame #449 (6 duplicate(s)).",
+      "evidence": [
+        "reference counter repeats",
+        "PTS advances normally",
+        "picture identical"
+      ],
+      "likely_origin": "capture / encoding (frame re-used)",
+      "confidence": "confirmed (reference counter)",
+      "frames": [
+        449,
+        455
+      ],
+      "repeats": 6
+    },
+    {
+      "layer": "source",
+      "type": "duplicated_source_frame",
+      "severity": "medium",
+      "t_start_s": 26.9667,
+      "t_end_s": 27.0,
+      "detail": "Frame 810 repeats source frame #809.",
+      "evidence": [
+        "reference counter repeats",
+        "PTS advances normally",
+        "picture identical"
+      ],
+      "likely_origin": "capture / encoding (frame re-used)",
+      "confidence": "confirmed (reference counter)",
+      "frames": [
+        809,
+        810
+      ],
+      "repeats": 1
+    },
+    {
+      "layer": "content",
+      "type": "abrupt_change",
+      "severity": "low",
+      "t_start_s": 15.2,
+      "t_end_s": 15.2,
+      "detail": "Frame 456 differs sharply from its predecessor (\u0394=19.8, typical 4.5).",
+      "evidence": [
+        "frame difference spike"
+      ],
+      "likely_origin": "scene cut, skipped frames or corruption",
+      "confidence": "possible (picture content only)",
+      "frames": [
+        455,
+        456
+      ]
+    }
+  ],
+  "verdict": "VALID_WITH_FRAME_ANOMALIES",
+  "limitations": [
+    "A byte-perfect transfer (matching SHA-256) proves only that the backend holds exactly the bytes the client sent. It cannot prove that the recording itself has no dropped frames.",
+    "Without a reference counter, missing frames are inferred from timestamp gaps. If a capture pipeline drops frames and then re-stamps the remaining frames at a regular rate, the drop is invisible to timestamps and can only be suspected from abrupt picture changes.",
+    "Frozen (identical) consecutive pictures may be a capture freeze or a genuinely static scene; content analysis alone cannot tell them apart.",
+    "Resampling to 30 FPS intentionally repeats frames (sources < 30 FPS) or omits them (sources > 30 FPS); those are reported as conversion effects, not anomalies.",
+    "Decoder error concealment can hide small corruptions: a damaged slice may decode without an error but with visual artefacts that no metric here flags.",
+    "Abrupt-change detection uses a statistical threshold; scene cuts in real footage produce false positives."
+  ],
+  "thumbnails": {
+    "449": "frame_00449.jpg",
+    "455": "frame_00455.jpg",
+    "456": "frame_00456.jpg",
+    "809": "frame_00809.jpg",
+    "810": "frame_00810.jpg",
+    "811": "frame_00811.jpg"
+  },
+  "analysis_seconds": 1.99,
+  "anomaly_counts": {
+    "missing_source_frames": 2,
+    "duplicated_source_frame": 2,
+    "abrupt_change": 1
+  }
+}

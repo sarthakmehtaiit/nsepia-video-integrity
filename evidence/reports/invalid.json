@@ -1,0 +1,68 @@
+{
+  "file": "video.mp4",
+  "size_bytes": 524288,
+  "sha256": "c0bd564cbe3e30cbe64587748f78c3764c60e9b0582486ac4fa2f5472782723e",
+  "transfer": {
+    "status": "verified",
+    "client_sha256": "c0bd564cbe3e30cbe64587748f78c3764c60e9b0582486ac4fa2f5472782723e",
+    "server_sha256": "c0bd564cbe3e30cbe64587748f78c3764c60e9b0582486ac4fa2f5472782723e",
+    "size": 524288,
+    "chunks_ok": 4,
+    "chunks_rejected": 3,
+    "duplicate_chunks": 0,
+    "offset_conflicts": 0,
+    "upload_seconds": 11.83,
+    "client_meta": {
+      "retries": 3,
+      "timeouts": 0,
+      "conn_errors": 3,
+      "hash_rejects": 0,
+      "offset_resyncs": 0,
+      "path_switches": 0,
+      "chunks_sent": 4,
+      "bytes_sent": 524288,
+      "duplicate_acks": 0,
+      "client_seconds": 12.07
+    }
+  },
+  "validation": {
+    "container_sniff": null,
+    "opened": false,
+    "errors": [
+      "File signature is not a known video container (no 'ftyp'/EBML/RIFF header).",
+      "Demuxer could not open file: InvalidDataError: [Errno 1094995529] Invalid data found when processing input: './data/uploads/2886f90b0c134a55bae007d1573974fb/video.mp4'"
+    ],
+    "warnings": []
+  },
+  "stream": {},
+  "decode": {},
+  "frames_30fps": {},
+  "anomalies": [
+    {
+      "layer": "file",
+      "type": "unparseable_container",
+      "severity": "critical",
+      "t_start_s": null,
+      "t_end_s": null,
+      "detail": "Container could not be parsed; no frames can be extracted.",
+      "evidence": [
+        "demuxer error"
+      ],
+      "likely_origin": "file damage / not a video",
+      "confidence": "confirmed (decoder/container)"
+    }
+  ],
+  "verdict": "INVALID_VIDEO",
+  "limitations": [
+    "A byte-perfect transfer (matching SHA-256) proves only that the backend holds exactly the bytes the client sent. It cannot prove that the recording itself has no dropped frames.",
+    "Without a reference counter, missing frames are inferred from timestamp gaps. If a capture pipeline drops frames and then re-stamps the remaining frames at a regular rate, the drop is invisible to timestamps and can only be suspected from abrupt picture changes.",
+    "Frozen (identical) consecutive pictures may be a capture freeze or a genuinely static scene; content analysis alone cannot tell them apart.",
+    "Resampling to 30 FPS intentionally repeats frames (sources < 30 FPS) or omits them (sources > 30 FPS); those are reported as conversion effects, not anomalies.",
+    "Decoder error concealment can hide small corruptions: a damaged slice may decode without an error but with visual artefacts that no metric here flags.",
+    "Abrupt-change detection uses a statistical threshold; scene cuts in real footage produce false positives."
+  ],
+  "analysis_seconds": 0.05,
+  "anomaly_counts": {
+    "unparseable_container": 1
+  }
+}

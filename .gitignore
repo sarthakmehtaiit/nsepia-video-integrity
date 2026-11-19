@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.venv_install.log
+# runtime upload store (re-created by server / tests)
+data/
+# generated test videos (~66 MB) - recreate with: python tools/make_videos.py samples
+samples/*.mp4

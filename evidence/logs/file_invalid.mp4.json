@@ -1,0 +1,367 @@
+{
+ "result": {
+  "file": "./samples/invalid.mp4",
+  "size": 524288,
+  "sha256": "c0bd564cbe3e30cbe64587748f78c3764c60e9b0582486ac4fa2f5472782723e",
+  "upload_id": "2886f90b0c134a55bae007d1573974fb",
+  "resumed_from": 0,
+  "status": "SUCCESS",
+  "server_state": "verified",
+  "server_detail": "byte-for-byte match (size + SHA-256)",
+  "server_sha256": "c0bd564cbe3e30cbe64587748f78c3764c60e9b0582486ac4fa2f5472782723e",
+  "verdict": "INVALID_VIDEO",
+  "anomaly_counts": {
+   "unparseable_container": 1
+  },
+  "report_url": "http://127.0.0.1:9110/reports/2886f90b0c134a55bae007d1573974fb",
+  "seconds": 12.19,
+  "metrics": {
+   "retries": 3,
+   "timeouts": 0,
+   "conn_errors": 3,
+   "hash_rejects": 0,
+   "offset_resyncs": 0,
+   "path_switches": 0,
+   "chunks_sent": 4,
+   "bytes_sent": 524288,
+   "duplicate_acks": 0
+  },
+  "final_endpoint": "http://127.0.0.1:9110",
+  "netsim": {
+   "mobile": {
+    "profile": "variable",
+    "stats": {
+     "connections": 12,
+     "bytes_up": 985156,
+     "stalls": 1,
+     "resets": 2,
+     "corrupted": 0,
+     "outage_kills": 0,
+     "refused_in_outage": 0
+    },
+    "strength_min": 0.2,
+    "strength_max": 1.0
+   }
+  }
+ },
+ "attempts": [
+  {
+   "off": 0,
+   "n": 262144,
+   "timeout": 5.3,
+   "err": "[Errno 54] Connection reset by peer",
+   "t": 5.542,
+   "kind": "chunk_fail",
+   "ep": 0
+  },
+  {
+   "off": 0,
+   "n": 131072,
+   "dt": 0.742,
+   "bps": 176720,
+   "t": 7.453,
+   "kind": "chunk_ok",
+   "ep": 0
+  },
+  {
+   "off": 131072,
+   "n": 262144,
+   "timeout": 5.4,
+   "err": "[Errno 54] Connection reset by peer",
+   "t": 8.295,
+   "kind": "chunk_fail",
+   "ep": 0
+  },
+  {
+   "off": 131072,
+   "n": 131072,
+   "dt": 0.693,
+   "bps": 189104,
+   "t": 10.068,
+   "kind": "chunk_ok",
+   "ep": 0
+  },
+  {
+   "off": 262144,
+   "n": 262144,
+   "timeout": 5.4,
+   "err": "[Errno 54] Connection reset by peer",
+   "t": 10.479,
+   "kind": "chunk_fail",
+   "ep": 0
+  },
+  {
+   "off": 262144,
+   "n": 131072,
+   "dt": 0.462,
+   "bps": 283878,
+   "t": 11.887,
+   "kind": "chunk_ok",
+   "ep": 0
+  },
+  {
+   "off": 393216,
+   "n": 131072,
+   "dt": 0.184,
+   "bps": 711789,
+   "t": 12.071,
+   "kind": "chunk_ok",
+   "ep": 0
+  }
+ ],
+ "strength_trace": {
+  "mobile": [
+   [
+    0.0,
+    0.6,
+    ""
+   ],
+   [
+    0.26,
+    0.6,
+    ""
+   ],
+   [
+    0.51,
+    0.564,
+    ""
+   ],
+   [
+    0.76,
+    0.564,
+    ""
+   ],
+   [
+    1.02,
+    0.417,
+    ""
+   ],
+   [
+    1.28,
+    0.417,
+    ""
+   ],
+   [
+    1.54,
+    0.579,
+    ""
+   ],
+   [
+    1.8,
+    0.579,
+    ""
+   ],
+   [
+    2.05,
+    0.409,
+    ""
+   ],
+   [
+    2.3,
+    0.409,
+    ""
+   ],
+   [
+    2.55,
+    0.323,
+    ""
+   ],
+   [
+    2.8,
+    0.323,
+    ""
+   ],
+   [
+    3.06,
+    0.55,
+    ""
+   ],
+   [
+    3.32,
+    0.55,
+    ""
+   ],
+   [
+    3.57,
+    0.322,
+    ""
+   ],
+   [
+    3.83,
+    0.322,
+    ""
+   ],
+   [
+    4.08,
+    0.374,
+    ""
+   ],
+   [
+    4.33,
+    0.374,
+    ""
+   ],
+   [
+    4.59,
+    0.265,
+    ""
+   ],
+   [
+    4.85,
+    0.265,
+    ""
+   ],
+   [
+    5.11,
+    0.244,
+    ""
+   ],
+   [
+    5.37,
+    0.244,
+    ""
+   ],
+   [
+    5.62,
+    0.325,
+    ""
+   ],
+   [
+    5.88,
+    0.325,
+    ""
+   ],
+   [
+    6.14,
+    0.459,
+    ""
+   ],
+   [
+    6.4,
+    0.459,
+    ""
+   ],
+   [
+    6.65,
+    0.693,
+    ""
+   ],
+   [
+    6.9,
+    0.693,
+    ""
+   ],
+   [
+    7.16,
+    0.465,
+    ""
+   ],
+   [
+    7.41,
+    0.465,
+    ""
+   ],
+   [
+    7.67,
+    0.2,
+    ""
+   ],
+   [
+    7.93,
+    0.2,
+    ""
+   ],
+   [
+    8.18,
+    0.405,
+    ""
+   ],
+   [
+    8.44,
+    0.405,
+    ""
+   ],
+   [
+    8.69,
+    0.541,
+    ""
+   ],
+   [
+    8.94,
+    0.541,
+    ""
+   ],
+   [
+    9.2,
+    0.624,
+    ""
+   ],
+   [
+    9.45,
+    0.624,
+    ""
+   ],
+   [
+    9.7,
+    0.609,
+    ""
+   ],
+   [
+    9.96,
+    0.609,
+    ""
+   ],
+   [
+    10.22,
+    0.521,
+    ""
+   ],
+   [
+    10.48,
+    0.521,
+    ""
+   ],
+   [
+    10.74,
+    0.693,
+    ""
+   ],
+   [
+    11.0,
+    0.693,
+    ""
+   ],
+   [
+    11.25,
+    0.562,
+    ""
+   ],
+   [
+    11.5,
+    1.0,
+    ""
+   ],
+   [
+    11.76,
+    1.0,
+    ""
+   ],
+   [
+    12.02,
+    1.0,
+    ""
+   ]
+  ]
+ },
+ "client_log": [
+  "uploading ./samples/invalid.mp4 (524,288 B) sha256=c0bd564cbe3e30cb\u2026",
+  "  chunk @0 (256 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer",
+  "   25.0%     131,072/524,288  chunk=128KiB     173 KiB/s",
+  "  chunk @131,072 (256 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer",
+  "   50.0%     262,144/524,288  chunk=128KiB     185 KiB/s",
+  "  chunk @262,144 (256 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer",
+  "   75.0%     393,216/524,288  chunk=128KiB     277 KiB/s",
+  "  100.0%     524,288/524,288  chunk=128KiB     695 KiB/s",
+  "RESULT SUCCESS in 12.19s  {\"retries\": 3, \"timeouts\": 0, \"conn_errors\": 3, \"hash_rejects\": 0, \"offset_resyncs\": 0, \"path_switches\": 0, \"chunks_sent\": 4, \"bytes_sent\": 524288, \"duplicate_acks\": 0}"
+ ]
+}

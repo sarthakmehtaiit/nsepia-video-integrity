@@ -1,0 +1,503 @@
+{
+ "result": {
+  "file": "./samples/clean_30fps.mp4",
+  "size": 10634479,
+  "sha256": "df7d732f3643aee8fc7e3380bb38d6c09c51c169d4c8afc7f519890deb0f397a",
+  "upload_id": "68cd8b9bc34e496ab300825f2f0430d1",
+  "resumed_from": 0,
+  "status": "STALLED",
+  "error": "STALLED: no progress for 17s at 2621440/10634479 bytes",
+  "bytes_confirmed": 2621440,
+  "seconds": 19.15,
+  "metrics": {
+   "retries": 3,
+   "timeouts": 1,
+   "conn_errors": 2,
+   "hash_rejects": 0,
+   "offset_resyncs": 0,
+   "path_switches": 0,
+   "chunks_sent": 5,
+   "bytes_sent": 2621440,
+   "duplicate_acks": 0
+  },
+  "final_endpoint": "http://127.0.0.1:9108",
+  "netsim": {
+   "dead": {
+    "profile": "wifi_dies",
+    "stats": {
+     "connections": 9,
+     "bytes_up": 2623131,
+     "stalls": 0,
+     "resets": 0,
+     "corrupted": 0,
+     "outage_kills": 0,
+     "refused_in_outage": 0
+    },
+    "strength_min": 1.0,
+    "strength_max": 1.0
+   }
+  }
+ },
+ "attempts": [
+  {
+   "off": 0,
+   "n": 262144,
+   "dt": 0.215,
+   "bps": 1221324,
+   "t": 0.279,
+   "kind": "chunk_ok",
+   "ep": 0
+  },
+  {
+   "off": 262144,
+   "n": 393216,
+   "dt": 0.295,
+   "bps": 1334229,
+   "t": 0.578,
+   "kind": "chunk_ok",
+   "ep": 0
+  },
+  {
+   "off": 655360,
+   "n": 524288,
+   "dt": 0.376,
+   "bps": 1394865,
+   "t": 0.956,
+   "kind": "chunk_ok",
+   "ep": 0
+  },
+  {
+   "off": 1179648,
+   "n": 655360,
+   "dt": 0.465,
+   "bps": 1407947,
+   "t": 1.424,
+   "kind": "chunk_ok",
+   "ep": 0
+  },
+  {
+   "off": 1835008,
+   "n": 786432,
+   "dt": 0.546,
+   "bps": 1440404,
+   "t": 1.972,
+   "kind": "chunk_ok",
+   "ep": 0
+  },
+  {
+   "off": 2621440,
+   "n": 917504,
+   "timeout": 4.0,
+   "err": "timed out",
+   "t": 5.976,
+   "kind": "chunk_fail",
+   "ep": 0
+  },
+  {
+   "err": "[Errno 54] Connection reset by peer",
+   "t": 11.349,
+   "kind": "resync_fail",
+   "ep": 0
+  },
+  {
+   "err": "[Errno 54] Connection reset by peer",
+   "t": 17.401,
+   "kind": "resync_fail",
+   "ep": 0
+  }
+ ],
+ "strength_trace": {
+  "dead": [
+   [
+    0.0,
+    1.0,
+    ""
+   ],
+   [
+    0.25,
+    1.0,
+    ""
+   ],
+   [
+    0.5,
+    1.0,
+    ""
+   ],
+   [
+    0.75,
+    1.0,
+    ""
+   ],
+   [
+    1.01,
+    1.0,
+    ""
+   ],
+   [
+    1.26,
+    1.0,
+    ""
+   ],
+   [
+    1.52,
+    1.0,
+    ""
+   ],
+   [
+    1.77,
+    1.0,
+    ""
+   ],
+   [
+    2.03,
+    1.0,
+    "blackhole"
+   ],
+   [
+    2.28,
+    1.0,
+    "blackhole"
+   ],
+   [
+    2.53,
+    1.0,
+    "blackhole"
+   ],
+   [
+    2.79,
+    1.0,
+    "blackhole"
+   ],
+   [
+    3.04,
+    1.0,
+    "blackhole"
+   ],
+   [
+    3.3,
+    1.0,
+    "blackhole"
+   ],
+   [
+    3.56,
+    1.0,
+    "blackhole"
+   ],
+   [
+    3.81,
+    1.0,
+    "blackhole"
+   ],
+   [
+    4.07,
+    1.0,
+    "blackhole"
+   ],
+   [
+    4.32,
+    1.0,
+    "blackhole"
+   ],
+   [
+    4.57,
+    1.0,
+    "blackhole"
+   ],
+   [
+    4.82,
+    1.0,
+    "blackhole"
+   ],
+   [
+    5.07,
+    1.0,
+    "blackhole"
+   ],
+   [
+    5.32,
+    1.0,
+    "blackhole"
+   ],
+   [
+    5.58,
+    1.0,
+    "blackhole"
+   ],
+   [
+    5.83,
+    1.0,
+    "blackhole"
+   ],
+   [
+    6.08,
+    1.0,
+    "blackhole"
+   ],
+   [
+    6.34,
+    1.0,
+    "blackhole"
+   ],
+   [
+    6.59,
+    1.0,
+    "blackhole"
+   ],
+   [
+    6.85,
+    1.0,
+    "blackhole"
+   ],
+   [
+    7.1,
+    1.0,
+    "blackhole"
+   ],
+   [
+    7.35,
+    1.0,
+    "blackhole"
+   ],
+   [
+    7.6,
+    1.0,
+    "blackhole"
+   ],
+   [
+    7.86,
+    1.0,
+    "blackhole"
+   ],
+   [
+    8.11,
+    1.0,
+    "blackhole"
+   ],
+   [
+    8.36,
+    1.0,
+    "blackhole"
+   ],
+   [
+    8.61,
+    1.0,
+    "blackhole"
+   ],
+   [
+    8.87,
+    1.0,
+    "blackhole"
+   ],
+   [
+    9.12,
+    1.0,
+    "blackhole"
+   ],
+   [
+    9.38,
+    1.0,
+    "blackhole"
+   ],
+   [
+    9.63,
+    1.0,
+    "blackhole"
+   ],
+   [
+    9.89,
+    1.0,
+    "blackhole"
+   ],
+   [
+    10.14,
+    1.0,
+    "blackhole"
+   ],
+   [
+    10.4,
+    1.0,
+    "blackhole"
+   ],
+   [
+    10.65,
+    1.0,
+    "blackhole"
+   ],
+   [
+    10.9,
+    1.0,
+    "blackhole"
+   ],
+   [
+    11.16,
+    1.0,
+    "blackhole"
+   ],
+   [
+    11.41,
+    1.0,
+    "blackhole"
+   ],
+   [
+    11.67,
+    1.0,
+    "blackhole"
+   ],
+   [
+    11.92,
+    1.0,
+    "blackhole"
+   ],
+   [
+    12.18,
+    1.0,
+    "blackhole"
+   ],
+   [
+    12.43,
+    1.0,
+    "blackhole"
+   ],
+   [
+    12.68,
+    1.0,
+    "blackhole"
+   ],
+   [
+    12.94,
+    1.0,
+    "blackhole"
+   ],
+   [
+    13.19,
+    1.0,
+    "blackhole"
+   ],
+   [
+    13.45,
+    1.0,
+    "blackhole"
+   ],
+   [
+    13.7,
+    1.0,
+    "blackhole"
+   ],
+   [
+    13.96,
+    1.0,
+    "blackhole"
+   ],
+   [
+    14.21,
+    1.0,
+    "blackhole"
+   ],
+   [
+    14.46,
+    1.0,
+    "blackhole"
+   ],
+   [
+    14.72,
+    1.0,
+    "blackhole"
+   ],
+   [
+    14.97,
+    1.0,
+    "blackhole"
+   ],
+   [
+    15.23,
+    1.0,
+    "blackhole"
+   ],
+   [
+    15.48,
+    1.0,
+    "blackhole"
+   ],
+   [
+    15.73,
+    1.0,
+    "blackhole"
+   ],
+   [
+    15.99,
+    1.0,
+    "blackhole"
+   ],
+   [
+    16.24,
+    1.0,
+    "blackhole"
+   ],
+   [
+    16.5,
+    1.0,
+    "blackhole"
+   ],
+   [
+    16.75,
+    1.0,
+    "blackhole"
+   ],
+   [
+    17.0,
+    1.0,
+    "blackhole"
+   ],
+   [
+    17.26,
+    1.0,
+    "blackhole"
+   ],
+   [
+    17.51,
+    1.0,
+    "blackhole"
+   ],
+   [
+    17.77,
+    1.0,
+    "blackhole"
+   ],
+   [
+    18.02,
+    1.0,
+    "blackhole"
+   ],
+   [
+    18.27,
+    1.0,
+    "blackhole"
+   ],
+   [
+    18.52,
+    1.0,
+    "blackhole"
+   ],
+   [
+    18.77,
+    1.0,
+    "blackhole"
+   ],
+   [
+    19.03,
+    1.0,
+    "blackhole"
+   ]
+  ]
+ },
+ "client_log": [
+  "uploading ./samples/clean_30fps.mp4 (10,634,479 B) sha256=df7d732f3643aee8\u2026",
+  "    2.5%     262,144/10,634,479  chunk=256KiB    1193 KiB/s",
+  "    6.2%     655,360/10,634,479  chunk=384KiB    1303 KiB/s",
+  "   11.1%   1,179,648/10,634,479  chunk=512KiB    1362 KiB/s",
+  "   17.3%   1,835,008/10,634,479  chunk=640KiB    1375 KiB/s",
+  "   24.7%   2,621,440/10,634,479  chunk=768KiB    1407 KiB/s",
+  "  chunk @2,621,440 (896 KiB) failed: timeout: timed out",
+  "RESULT STALLED in 19.15s  {\"retries\": 3, \"timeouts\": 1, \"conn_errors\": 2, \"hash_rejects\": 0, \"offset_resyncs\": 0, \"path_switches\": 0, \"chunks_sent\": 5, \"bytes_sent\": 2621440, \"duplicate_acks\": 0}"
+ ]
+}

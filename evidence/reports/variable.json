@@ -1,0 +1,250 @@
+{
+  "file": "video.mp4",
+  "size_bytes": 10648976,
+  "sha256": "0d2e12e3ff5f7426239dc50962a8703907fc02491336af7ccf237dca6eb52b68",
+  "transfer": {
+    "status": "verified",
+    "client_sha256": "0d2e12e3ff5f7426239dc50962a8703907fc02491336af7ccf237dca6eb52b68",
+    "server_sha256": "0d2e12e3ff5f7426239dc50962a8703907fc02491336af7ccf237dca6eb52b68",
+    "size": 10648976,
+    "chunks_ok": 33,
+    "chunks_rejected": 11,
+    "duplicate_chunks": 0,
+    "offset_conflicts": 0,
+    "upload_seconds": 78.89,
+    "client_meta": {
+      "retries": 11,
+      "timeouts": 6,
+      "conn_errors": 5,
+      "hash_rejects": 0,
+      "offset_resyncs": 0,
+      "path_switches": 0,
+      "chunks_sent": 33,
+      "bytes_sent": 10648976,
+      "duplicate_acks": 0,
+      "client_seconds": 78.74
+    }
+  },
+  "validation": {
+    "container_sniff": "iso-bmff (mp4/mov)",
+    "opened": true,
+    "errors": [],
+    "warnings": []
+  },
+  "stream": {
+    "codec": "h264",
+    "width": 640,
+    "height": 360,
+    "pix_fmt": "yuv420p",
+    "time_base": "1/12000",
+    "nominal_fps": 29.467,
+    "declared_frames": 884,
+    "declared_duration_s": 30.0,
+    "container_format": "mov,mp4,m4a,3gp,3g2,mj2",
+    "bit_rate": 2839726
+  },
+  "decode": {
+    "packets_read": 884,
+    "corrupt_packets_flagged": 0,
+    "frames_decoded": 884,
+    "decode_errors": 0,
+    "decode_error_samples": [],
+    "first_pts_s": 0.0,
+    "last_pts_s": 29.9667,
+    "timestamps": {
+      "expected_interval_ms": 33.333,
+      "median_interval_ms": 33.333,
+      "jitter_std_ms": 12.577,
+      "min_interval_ms": 33.333,
+      "max_interval_ms": 366.667,
+      "measured_fps": 30.0,
+      "is_vfr": true
+    },
+    "reference_counter": {
+      "present": true,
+      "readable_frames": 884
+    },
+    "content": {
+      "median_frame_diff": 4.47,
+      "diff_mad": 0.384
+    }
+  },
+  "frames_30fps": {
+    "target_fps": 30,
+    "grid_frames": 900,
+    "source_frames": 884,
+    "grid_slots_repeating_previous_source_frame": 16,
+    "source_frames_not_sampled": 0,
+    "note": "Repeats/omissions here are caused by converting the source timeline to a 30 FPS grid and are NOT anomalies by themselves. A repeat counts as an anomaly only if the source timeline also shows a gap (see timing/source anomalies)."
+  },
+  "anomalies": [
+    {
+      "layer": "source",
+      "type": "missing_source_frames",
+      "severity": "high",
+      "t_start_s": 9.9667,
+      "t_end_s": 10.1667,
+      "detail": "Source frames #300\u2013#304 (5) are absent between frames 299 and 300.",
+      "evidence": [
+        "reference counter jump",
+        "PTS gap agrees"
+      ],
+      "likely_origin": "capture / encoding (never in file)",
+      "confidence": "confirmed (reference counter + timestamps)",
+      "frames": [
+        299,
+        300
+      ],
+      "missing_frames": 5
+    },
+    {
+      "layer": "source",
+      "type": "missing_source_frames",
+      "severity": "high",
+      "t_start_s": 19.9667,
+      "t_end_s": 20.0333,
+      "detail": "Source frames #600\u2013#600 (1) are absent between frames 594 and 595.",
+      "evidence": [
+        "reference counter jump",
+        "PTS gap agrees"
+      ],
+      "likely_origin": "capture / encoding (never in file)",
+      "confidence": "confirmed (reference counter + timestamps)",
+      "frames": [
+        594,
+        595
+      ],
+      "missing_frames": 1
+    },
+    {
+      "layer": "source",
+      "type": "missing_source_frames",
+      "severity": "high",
+      "t_start_s": 24.9667,
+      "t_end_s": 25.3333,
+      "detail": "Source frames #750\u2013#759 (10) are absent between frames 743 and 744.",
+      "evidence": [
+        "reference counter jump",
+        "PTS gap agrees"
+      ],
+      "likely_origin": "capture / encoding (never in file)",
+      "confidence": "confirmed (reference counter + timestamps)",
+      "frames": [
+        743,
+        744
+      ],
+      "missing_frames": 10
+    },
+    {
+      "layer": "timing",
+      "type": "timestamp_gap",
+      "severity": "medium",
+      "t_start_s": 9.9667,
+      "t_end_s": 10.1667,
+      "detail": "200.0 ms gap (expected 33.3 ms) \u2248 5 frame slot(s) with no picture after frame 299.",
+      "evidence": [
+        "container PTS"
+      ],
+      "likely_origin": "capture / encoding (frames never written)",
+      "confidence": "likely (timestamps only)",
+      "frames": [
+        299,
+        300
+      ],
+      "missing_frames": 5
+    },
+    {
+      "layer": "timing",
+      "type": "timestamp_gap",
+      "severity": "medium",
+      "t_start_s": 19.9667,
+      "t_end_s": 20.0333,
+      "detail": "66.7 ms gap (expected 33.3 ms) \u2248 1 frame slot(s) with no picture after frame 594.",
+      "evidence": [
+        "container PTS"
+      ],
+      "likely_origin": "capture / encoding (frames never written)",
+      "confidence": "likely (timestamps only)",
+      "frames": [
+        594,
+        595
+      ],
+      "missing_frames": 1
+    },
+    {
+      "layer": "timing",
+      "type": "timestamp_gap",
+      "severity": "medium",
+      "t_start_s": 24.9667,
+      "t_end_s": 25.3333,
+      "detail": "366.7 ms gap (expected 33.3 ms) \u2248 10 frame slot(s) with no picture after frame 743.",
+      "evidence": [
+        "container PTS"
+      ],
+      "likely_origin": "capture / encoding (frames never written)",
+      "confidence": "likely (timestamps only)",
+      "frames": [
+        743,
+        744
+      ],
+      "missing_frames": 10
+    },
+    {
+      "layer": "content",
+      "type": "abrupt_change",
+      "severity": "low",
+      "t_start_s": 10.1667,
+      "t_end_s": 10.1667,
+      "detail": "Frame 300 differs sharply from its predecessor (\u0394=19.7, typical 4.5).",
+      "evidence": [
+        "frame difference spike"
+      ],
+      "likely_origin": "scene cut, skipped frames or corruption",
+      "confidence": "possible (picture content only)",
+      "frames": [
+        299,
+        300
+      ]
+    },
+    {
+      "layer": "content",
+      "type": "abrupt_change",
+      "severity": "low",
+      "t_start_s": 25.3333,
+      "t_end_s": 25.3333,
+      "detail": "Frame 744 differs sharply from its predecessor (\u0394=29.1, typical 4.5).",
+      "evidence": [
+        "frame difference spike"
+      ],
+      "likely_origin": "scene cut, skipped frames or corruption",
+      "confidence": "possible (picture content only)",
+      "frames": [
+        743,
+        744
+      ]
+    }
+  ],
+  "verdict": "VALID_WITH_FRAME_ANOMALIES",
+  "limitations": [
+    "A byte-perfect transfer (matching SHA-256) proves only that the backend holds exactly the bytes the client sent. It cannot prove that the recording itself has no dropped frames.",
+    "Without a reference counter, missing frames are inferred from timestamp gaps. If a capture pipeline drops frames and then re-stamps the remaining frames at a regular rate, the drop is invisible to timestamps and can only be suspected from abrupt picture changes.",
+    "Frozen (identical) consecutive pictures may be a capture freeze or a genuinely static scene; content analysis alone cannot tell them apart.",
+    "Resampling to 30 FPS intentionally repeats frames (sources < 30 FPS) or omits them (sources > 30 FPS); those are reported as conversion effects, not anomalies.",
+    "Decoder error concealment can hide small corruptions: a damaged slice may decode without an error but with visual artefacts that no metric here flags.",
+    "Abrupt-change detection uses a statistical threshold; scene cuts in real footage produce false positives."
+  ],
+  "thumbnails": {
+    "299": "frame_00299.jpg",
+    "300": "frame_00300.jpg",
+    "594": "frame_00594.jpg",
+    "595": "frame_00595.jpg",
+    "743": "frame_00743.jpg",
+    "744": "frame_00744.jpg"
+  },
+  "analysis_seconds": 2.01,
+  "anomaly_counts": {
+    "missing_source_frames": 3,
+    "timestamp_gap": 3,
+    "abrupt_change": 2
+  }
+}

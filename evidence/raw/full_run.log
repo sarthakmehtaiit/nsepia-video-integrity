@@ -1,0 +1,1333 @@
+22:40:18 backend listening on http://127.0.0.1:8765  data=./data
+
+===== stable: Stable connection (100%)
+[stable] uploading ./samples/clean_30fps.mp4 (10,634,479 B) sha256=df7d732f3643aee8…
+22:40:18 [6eb4de9c] new upload clean_30fps.mp4 10,634,479 B
+22:40:18 connection error from 127.0.0.1:51734: ConnectionResetError
+[stable]     2.5%     262,144/10,634,479  chunk=256KiB     985 KiB/s
+22:40:18 connection error from 127.0.0.1:51736: ConnectionResetError
+[stable]     6.2%     655,360/10,634,479  chunk=384KiB    1025 KiB/s
+22:40:19 connection error from 127.0.0.1:51738: ConnectionResetError
+[stable]    11.1%   1,179,648/10,634,479  chunk=512KiB    1074 KiB/s
+22:40:19 connection error from 127.0.0.1:51740: ConnectionResetError
+[stable]    17.3%   1,835,008/10,634,479  chunk=640KiB    1093 KiB/s
+22:40:20 connection error from 127.0.0.1:51742: ConnectionResetError
+[stable]    24.7%   2,621,440/10,634,479  chunk=768KiB    1114 KiB/s
+22:40:20 connection error from 127.0.0.1:51744: ConnectionResetError
+[stable]    33.3%   3,538,944/10,634,479  chunk=896KiB    1122 KiB/s
+22:40:21 connection error from 127.0.0.1:51746: ConnectionResetError
+[stable]    43.1%   4,587,520/10,634,479  chunk=1024KiB    1145 KiB/s
+22:40:22 connection error from 127.0.0.1:51748: ConnectionResetError
+[stable]    54.2%   5,767,168/10,634,479  chunk=1152KiB    1146 KiB/s
+22:40:23 connection error from 127.0.0.1:51750: ConnectionResetError
+[stable]    65.3%   6,946,816/10,634,479  chunk=1152KiB    1145 KiB/s
+22:40:24 connection error from 127.0.0.1:51752: ConnectionResetError
+[stable]    76.4%   8,126,464/10,634,479  chunk=1152KiB    1125 KiB/s
+22:40:25 connection error from 127.0.0.1:51755: ConnectionResetError
+[stable]    87.5%   9,306,112/10,634,479  chunk=1152KiB    1138 KiB/s
+22:40:26 connection error from 127.0.0.1:51757: ConnectionResetError
+[stable]    98.6%  10,485,760/10,634,479  chunk=1152KiB    1151 KiB/s
+22:40:27 connection error from 127.0.0.1:51759: ConnectionResetError
+[stable]   100.0%  10,634,479/10,634,479  chunk=145KiB     823 KiB/s
+22:40:27 connection error from 127.0.0.1:51761: ConnectionResetError
+22:40:27 [6eb4de9c] VERIFIED 10,634,479 B in 9.41s; analysing…
+22:40:29 [6eb4de9c] report: VALID_NO_ANOMALIES {}
+[stable] RESULT SUCCESS in 11.27s  {"retries": 0, "timeouts": 0, "conn_errors": 0, "hash_rejects": 0, "offset_resyncs": 0, "path_switches": 0, "chunks_sent": 13, "bytes_sent": 10634479, "duplicate_acks": 0}
+22:40:29 connection error from 127.0.0.1:51763: ConnectionResetError
+===== stable: PASS
+
+===== variable: Variable signal 20–100%
+[variable] uploading ./samples/dropped_frames.mp4 (10,648,976 B) sha256=0d2e12e3ff5f7426…
+22:40:29 [1f34e2a6] new upload dropped_frames.mp4 10,648,976 B
+22:40:30 connection error from 127.0.0.1:51766: ConnectionResetError
+[variable]     2.5%     262,144/10,648,976  chunk=256KiB     486 KiB/s
+22:40:30 connection error from 127.0.0.1:51768: ConnectionResetError
+[variable]     6.2%     655,360/10,648,976  chunk=384KiB     190 KiB/s
+22:40:32 connection error from 127.0.0.1:51770: ConnectionResetError
+[variable]     9.8%   1,048,576/10,648,976  chunk=384KiB     227 KiB/s
+22:40:34 connection error from 127.0.0.1:51772: ConnectionResetError
+[variable]   chunk @1,048,576 (384 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:40:39 [1f34e2a6] incomplete chunk @1048576: [Errno 54] Connection reset by peer
+22:40:40 connection error from 127.0.0.1:51777: ConnectionResetError
+[variable]    11.7%   1,245,184/10,648,976  chunk=192KiB     111 KiB/s
+22:40:42 connection error from 127.0.0.1:51779: ConnectionResetError
+[variable]   chunk @1,245,184 (192 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:40:43 [1f34e2a6] incomplete chunk @1245184: [Errno 54] Connection reset by peer
+22:40:44 connection error from 127.0.0.1:51783: ConnectionResetError
+[variable]    12.6%   1,343,488/10,648,976  chunk=96KiB     130 KiB/s
+22:40:45 connection error from 127.0.0.1:51785: ConnectionResetError
+[variable]    14.8%   1,572,864/10,648,976  chunk=224KiB     329 KiB/s
+22:40:46 connection error from 127.0.0.1:51787: ConnectionResetError
+[variable]    18.2%   1,933,312/10,648,976  chunk=352KiB     701 KiB/s
+22:40:46 connection error from 127.0.0.1:51789: ConnectionResetError
+[variable]   chunk @1,933,312 (480 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:40:51 [1f34e2a6] incomplete chunk @1933312: [Errno 54] Connection reset by peer
+22:40:52 connection error from 127.0.0.1:51794: ConnectionResetError
+[variable]   chunk @1,933,312 (240 KiB) failed: timeout: timed out
+22:40:57 [1f34e2a6] incomplete chunk @1933312: [Errno 54] Connection reset by peer
+22:40:59 connection error from 127.0.0.1:51798: ConnectionResetError
+[variable]    19.3%   2,056,192/10,648,976  chunk=120KiB     136 KiB/s
+22:40:59 connection error from 127.0.0.1:51800: ConnectionResetError
+[variable]    21.7%   2,310,144/10,648,976  chunk=248KiB     133 KiB/s
+22:41:01 connection error from 127.0.0.1:51802: ConnectionResetError
+[variable]    24.1%   2,564,096/10,648,976  chunk=248KiB     138 KiB/s
+22:41:03 connection error from 127.0.0.1:51804: ConnectionResetError
+[variable]    26.5%   2,818,048/10,648,976  chunk=248KiB     173 KiB/s
+22:41:05 connection error from 127.0.0.1:51806: ConnectionResetError
+[variable]    28.8%   3,072,000/10,648,976  chunk=248KiB     181 KiB/s
+22:41:06 connection error from 127.0.0.1:51808: ConnectionResetError
+[variable]   chunk @3,072,000 (248 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:41:06 [1f34e2a6] incomplete chunk @3072000: [Errno 54] Connection reset by peer
+22:41:08 connection error from 127.0.0.1:51812: ConnectionResetError
+[variable]    30.0%   3,198,976/10,648,976  chunk=124KiB     155 KiB/s
+22:41:08 connection error from 127.0.0.1:51814: ConnectionResetError
+[variable]    32.5%   3,457,024/10,648,976  chunk=252KiB     186 KiB/s
+22:41:10 connection error from 127.0.0.1:51816: ConnectionResetError
+[variable]    34.9%   3,715,072/10,648,976  chunk=252KiB     173 KiB/s
+22:41:11 connection error from 127.0.0.1:51818: ConnectionResetError
+[variable]    37.3%   3,973,120/10,648,976  chunk=252KiB     320 KiB/s
+22:41:12 connection error from 127.0.0.1:51820: ConnectionResetError
+[variable]    41.0%   4,362,240/10,648,976  chunk=380KiB    1022 KiB/s
+22:41:12 connection error from 127.0.0.1:51822: ConnectionResetError
+[variable]    45.8%   4,882,432/10,648,976  chunk=508KiB     361 KiB/s
+22:41:14 connection error from 127.0.0.1:51824: ConnectionResetError
+[variable]    50.7%   5,402,624/10,648,976  chunk=508KiB     505 KiB/s
+22:41:15 connection error from 127.0.0.1:51826: ConnectionResetError
+[variable]    55.6%   5,922,816/10,648,976  chunk=508KiB    1059 KiB/s
+22:41:15 connection error from 127.0.0.1:51828: ConnectionResetError
+[variable]   chunk @5,922,816 (636 KiB) failed: timeout: timed out
+22:41:20 [1f34e2a6] incomplete chunk @5922816: [Errno 54] Connection reset by peer
+22:41:21 connection error from 127.0.0.1:51833: ConnectionResetError
+[variable]    58.7%   6,248,448/10,648,976  chunk=318KiB     988 KiB/s
+22:41:21 connection error from 127.0.0.1:51835: ConnectionResetError
+[variable]    63.0%   6,705,152/10,648,976  chunk=446KiB    1038 KiB/s
+22:41:21 connection error from 127.0.0.1:51837: ConnectionResetError
+[variable]   chunk @6,705,152 (574 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:41:22 [1f34e2a6] incomplete chunk @6705152: [Errno 54] Connection reset by peer
+22:41:22 connection error from 127.0.0.1:51841: ConnectionResetError
+[variable]    65.7%   6,999,040/10,648,976  chunk=287KiB     990 KiB/s
+22:41:22 connection error from 127.0.0.1:51843: ConnectionResetError
+[variable]    69.7%   7,424,000/10,648,976  chunk=415KiB    1045 KiB/s
+22:41:23 connection error from 127.0.0.1:51845: ConnectionResetError
+[variable]   chunk @7,424,000 (543 KiB) failed: timeout: timed out
+22:41:28 [1f34e2a6] incomplete chunk @7424000: [Errno 54] Connection reset by peer
+22:41:28 connection error from 127.0.0.1:51849: ConnectionResetError
+[variable]    72.3%   7,702,016/10,648,976  chunk=271KiB     438 KiB/s
+22:41:29 connection error from 127.0.0.1:51851: ConnectionResetError
+[variable]   chunk @7,702,016 (399 KiB) failed: timeout: timed out
+22:41:33 connection error from 127.0.0.1:51855: ConnectionResetError
+[variable]    74.2%   7,906,560/10,648,976  chunk=199KiB     876 KiB/s
+22:41:33 connection error from 127.0.0.1:51857: ConnectionResetError
+22:41:34 [1f34e2a6] incomplete chunk @7702016: [Errno 54] Connection reset by peer
+[variable]    77.4%   8,242,176/10,648,976  chunk=327KiB    1003 KiB/s
+22:41:34 connection error from 127.0.0.1:51859: ConnectionResetError
+[variable]    81.8%   8,708,864/10,648,976  chunk=455KiB    1027 KiB/s
+22:41:34 connection error from 127.0.0.1:51861: ConnectionResetError
+[variable]   chunk @8,708,864 (583 KiB) failed: timeout: timed out
+22:41:39 connection error from 127.0.0.1:51865: ConnectionResetError
+[variable]    84.6%   9,007,744/10,648,976  chunk=291KiB     988 KiB/s
+22:41:39 connection error from 127.0.0.1:51867: ConnectionResetError
+22:41:39 [1f34e2a6] incomplete chunk @8708864: [Errno 54] Connection reset by peer
+[variable]    88.6%   9,437,696/10,648,976  chunk=419KiB     951 KiB/s
+22:41:39 connection error from 127.0.0.1:51869: ConnectionResetError
+[variable]    93.9%   9,998,720/10,648,976  chunk=547KiB     789 KiB/s
+22:41:40 connection error from 127.0.0.1:51871: ConnectionResetError
+[variable]   chunk @9,998,720 (635 KiB) failed: timeout: timed out
+22:41:45 [1f34e2a6] incomplete chunk @9998720: [Errno 54] Connection reset by peer
+22:41:46 connection error from 127.0.0.1:51876: ConnectionResetError
+[variable]    97.1%  10,344,768/10,648,976  chunk=337KiB     297 KiB/s
+22:41:47 connection error from 127.0.0.1:51878: ConnectionResetError
+[variable]   100.0%  10,648,976/10,648,976  chunk=297KiB     245 KiB/s
+22:41:48 connection error from 127.0.0.1:51880: ConnectionResetError
+22:41:48 [1f34e2a6] VERIFIED 10,648,976 B in 78.89s; analysing…
+22:41:50 [1f34e2a6] report: VALID_WITH_FRAME_ANOMALIES {'missing_source_frames': 3, 'timestamp_gap': 3, 'abrupt_change': 2}
+[variable] RESULT SUCCESS in 82.2s  {"retries": 11, "timeouts": 6, "conn_errors": 5, "hash_rejects": 0, "offset_resyncs": 0, "path_switches": 0, "chunks_sent": 33, "bytes_sent": 10648976, "duplicate_acks": 0}
+22:41:51 connection error from 127.0.0.1:51882: ConnectionResetError
+===== variable: PASS
+
+===== interrupt: Temporary interruptions, timeouts, reconnection
+[interrupt] uploading ./samples/duplicated_frames.mp4 (10,572,632 B) sha256=4a8b2dd9d2ae6810…
+22:41:52 [8c361973] new upload duplicated_frames.mp4 10,572,632 B
+22:41:52 connection error from 127.0.0.1:51886: ConnectionResetError
+[interrupt]     2.5%     262,144/10,572,632  chunk=256KiB     318 KiB/s
+22:41:53 connection error from 127.0.0.1:51888: ConnectionResetError
+[interrupt]     6.2%     655,360/10,572,632  chunk=384KiB     487 KiB/s
+22:41:54 connection error from 127.0.0.1:51890: ConnectionResetError
+[interrupt]    11.2%   1,179,648/10,572,632  chunk=512KiB     119 KiB/s
+22:41:58 connection error from 127.0.0.1:51892: ConnectionResetError
+[interrupt]   chunk @1,179,648 (512 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:42:00 [8c361973] incomplete chunk @1179648: [Errno 54] Connection reset by peer
+22:42:04 connection error from 127.0.0.1:51898: ConnectionResetError
+[interrupt]    11.8%   1,245,184/10,572,632  chunk=64KiB     195 KiB/s
+22:42:05 connection error from 127.0.0.1:51900: ConnectionResetError
+[interrupt]    13.6%   1,441,792/10,572,632  chunk=192KiB     631 KiB/s
+22:42:05 connection error from 127.0.0.1:51902: ConnectionResetError
+[interrupt]   chunk @1,441,792 (320 KiB) failed: timeout: timed out
+22:42:10 [8c361973] incomplete chunk @1441792: [Errno 54] Connection reset by peer
+22:42:11 connection error from 127.0.0.1:51907: ConnectionResetError
+[interrupt]    15.2%   1,605,632/10,572,632  chunk=160KiB     101 KiB/s
+22:42:12 connection error from 127.0.0.1:51910: ConnectionResetError
+[interrupt]    16.7%   1,769,472/10,572,632  chunk=160KiB     204 KiB/s
+22:42:13 connection error from 127.0.0.1:51912: ConnectionResetError
+[interrupt]   chunk @1,769,472 (288 KiB) failed: timeout: timed out
+22:42:18 [8c361973] incomplete chunk @1769472: [Errno 54] Connection reset by peer
+22:42:18 connection error from 127.0.0.1:51916: ConnectionResetError
+[interrupt]    18.1%   1,916,928/10,572,632  chunk=144KiB     835 KiB/s
+22:42:19 connection error from 127.0.0.1:51918: ConnectionResetError
+[interrupt]    20.8%   2,195,456/10,572,632  chunk=272KiB     961 KiB/s
+22:42:19 connection error from 127.0.0.1:51920: ConnectionResetError
+[interrupt]    24.6%   2,605,056/10,572,632  chunk=400KiB     858 KiB/s
+22:42:19 connection error from 127.0.0.1:51922: ConnectionResetError
+[interrupt]    29.8%   3,145,728/10,572,632  chunk=528KiB     659 KiB/s
+22:42:20 connection error from 127.0.0.1:51925: ConnectionResetError
+[interrupt]   chunk @3,145,728 (656 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:42:21 [8c361973] incomplete chunk @3145728: [Errno 54] Connection reset by peer
+22:42:22 connection error from 127.0.0.1:51929: ConnectionResetError
+[interrupt]    32.9%   3,481,600/10,572,632  chunk=328KiB     979 KiB/s
+22:42:22 connection error from 127.0.0.1:51931: ConnectionResetError
+[interrupt]   chunk @3,481,600 (456 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:42:22 [8c361973] incomplete chunk @3481600: [Errno 54] Connection reset by peer
+22:42:22 connection error from 127.0.0.1:51935: ConnectionResetError
+[interrupt]    35.1%   3,715,072/10,572,632  chunk=228KiB     950 KiB/s
+22:42:23 connection error from 127.0.0.1:51937: ConnectionResetError
+[interrupt]   chunk @3,715,072 (356 KiB) failed: timeout: timed out
+22:42:28 [8c361973] incomplete chunk @3715072: [Errno 54] Connection reset by peer
+22:42:28 connection error from 127.0.0.1:51942: ConnectionResetError
+[interrupt]    36.9%   3,897,344/10,572,632  chunk=178KiB     107 KiB/s
+22:42:30 connection error from 127.0.0.1:51946: ConnectionResetError
+[interrupt]    38.6%   4,079,616/10,572,632  chunk=178KiB     115 KiB/s
+22:42:32 connection error from 127.0.0.1:51948: ConnectionResetError
+[interrupt]   chunk @4,079,616 (178 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:42:33 [8c361973] incomplete chunk @4079616: [Errno 54] Connection reset by peer
+22:42:34 connection error from 127.0.0.1:51952: ConnectionResetError
+[interrupt]    39.4%   4,170,752/10,572,632  chunk=89KiB      77 KiB/s
+22:42:35 connection error from 127.0.0.1:51954: ConnectionResetError
+[interrupt]    40.3%   4,261,888/10,572,632  chunk=89KiB      66 KiB/s
+22:42:36 connection error from 127.0.0.1:51956: ConnectionResetError
+[interrupt]    41.2%   4,353,024/10,572,632  chunk=89KiB      67 KiB/s
+22:42:38 connection error from 127.0.0.1:51958: ConnectionResetError
+[interrupt]    42.0%   4,444,160/10,572,632  chunk=89KiB     702 KiB/s
+22:42:38 connection error from 127.0.0.1:51960: ConnectionResetError
+[interrupt]    44.1%   4,666,368/10,572,632  chunk=217KiB     922 KiB/s
+22:42:38 connection error from 127.0.0.1:51962: ConnectionResetError
+[interrupt]    47.5%   5,019,648/10,572,632  chunk=345KiB     697 KiB/s
+22:42:39 connection error from 127.0.0.1:51964: ConnectionResetError
+[interrupt]    52.1%   5,504,000/10,572,632  chunk=473KiB     658 KiB/s
+22:42:39 connection error from 127.0.0.1:51966: ConnectionResetError
+[interrupt]    57.9%   6,119,424/10,572,632  chunk=601KiB     959 KiB/s
+22:42:40 connection error from 127.0.0.1:51968: ConnectionResetError
+[interrupt]    64.9%   6,865,920/10,572,632  chunk=729KiB    1103 KiB/s
+22:42:41 connection error from 127.0.0.1:51970: ConnectionResetError
+[interrupt]    73.2%   7,743,488/10,572,632  chunk=857KiB     747 KiB/s
+22:42:42 connection error from 127.0.0.1:51972: ConnectionResetError
+[interrupt]    81.5%   8,621,056/10,572,632  chunk=857KiB     523 KiB/s
+22:42:43 connection error from 127.0.0.1:51974: ConnectionResetError
+[interrupt]   chunk @8,621,056 (857 KiB) failed: timeout: timed out
+22:42:48 [8c361973] incomplete chunk @8621056: [Errno 54] Connection reset by peer
+22:42:49 connection error from 127.0.0.1:51978: ConnectionResetError
+[interrupt]    85.7%   9,059,840/10,572,632  chunk=428KiB     969 KiB/s
+22:42:49 connection error from 127.0.0.1:51980: ConnectionResetError
+[interrupt]    91.1%   9,629,696/10,572,632  chunk=556KiB    1104 KiB/s
+22:42:50 connection error from 127.0.0.1:51982: ConnectionResetError
+[interrupt]    97.7%  10,330,624/10,572,632  chunk=684KiB     818 KiB/s
+22:42:51 connection error from 127.0.0.1:51985: ConnectionResetError
+[interrupt]   100.0%  10,572,632/10,572,632  chunk=236KiB     529 KiB/s
+22:42:51 connection error from 127.0.0.1:51987: ConnectionResetError
+22:42:51 [8c361973] VERIFIED 10,572,632 B in 59.71s; analysing…
+22:42:53 [8c361973] report: VALID_WITH_FRAME_ANOMALIES {'missing_source_frames': 2, 'duplicated_source_frame': 2, 'abrupt_change': 1}
+[interrupt] RESULT SUCCESS in 63.01s  {"retries": 10, "timeouts": 4, "conn_errors": 6, "hash_rejects": 0, "offset_resyncs": 0, "path_switches": 0, "chunks_sent": 30, "bytes_sent": 10572632, "duplicate_acks": 0}
+22:42:54 connection error from 127.0.0.1:51989: ConnectionResetError
+===== interrupt: PASS
+
+===== switching: Connection switching Wi-Fi → cellular
+[switching] uploading ./samples/capture_stall_vfr.mp4 (10,010,534 B) sha256=b95b0693cd582e29…
+22:42:54 [8a5f887c] new upload capture_stall_vfr.mp4 10,010,534 B
+22:42:54 connection error from 127.0.0.1:51992: ConnectionResetError
+[switching]     2.6%     262,144/10,010,534  chunk=256KiB    1173 KiB/s
+22:42:55 connection error from 127.0.0.1:51994: ConnectionResetError
+[switching]     6.5%     655,360/10,010,534  chunk=384KiB    1290 KiB/s
+22:42:55 connection error from 127.0.0.1:51996: ConnectionResetError
+[switching]    11.8%   1,179,648/10,010,534  chunk=512KiB    1348 KiB/s
+22:42:55 connection error from 127.0.0.1:51998: ConnectionResetError
+[switching]    18.3%   1,835,008/10,010,534  chunk=640KiB    1373 KiB/s
+22:42:56 connection error from 127.0.0.1:52000: ConnectionResetError
+[switching]    26.2%   2,621,440/10,010,534  chunk=768KiB    1427 KiB/s
+22:42:56 connection error from 127.0.0.1:52002: ConnectionResetError
+[switching]   chunk @2,621,440 (896 KiB) failed: timeout: timed out
+22:43:01 connection error from 127.0.0.1:52004: ConnectionResetError
+22:43:06 connection error from 127.0.0.1:52006: ConnectionResetError
+[switching]   ↪ switching path http://127.0.0.1:9104 -> http://127.0.0.1:9105
+22:43:12 connection error from 127.0.0.1:52008: ConnectionResetError
+22:43:14 connection error from 127.0.0.1:52010: ConnectionResetError
+[switching]    27.3%   2,736,128/10,010,534  chunk=112KiB      73 KiB/s
+22:43:16 connection error from 127.0.0.1:52012: ConnectionResetError
+[switching]   chunk @2,736,128 (112 KiB) failed: timeout: timed out
+22:43:21 [8a5f887c] incomplete chunk @2736128: [Errno 54] Connection reset by peer
+22:43:21 connection error from 127.0.0.1:52019: ConnectionResetError
+[switching]    27.9%   2,793,472/10,010,534  chunk=56KiB     327 KiB/s
+22:43:21 connection error from 127.0.0.1:52021: ConnectionResetError
+[switching]    29.8%   2,981,888/10,010,534  chunk=184KiB     435 KiB/s
+22:43:22 connection error from 127.0.0.1:52023: ConnectionResetError
+[switching]    33.0%   3,301,376/10,010,534  chunk=312KiB     468 KiB/s
+22:43:22 connection error from 127.0.0.1:52025: ConnectionResetError
+[switching]    37.5%   3,751,936/10,010,534  chunk=440KiB     311 KiB/s
+22:43:24 connection error from 127.0.0.1:52027: ConnectionResetError
+[switching]    42.0%   4,202,496/10,010,534  chunk=440KiB     313 KiB/s
+22:43:25 connection error from 127.0.0.1:52029: ConnectionResetError
+[switching]   chunk @4,202,496 (440 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:43:25 [8a5f887c] incomplete chunk @4202496: [Errno 54] Connection reset by peer
+22:43:27 connection error from 127.0.0.1:52033: ConnectionResetError
+[switching]   chunk @4,202,496 (220 KiB) failed: timeout: timed out
+22:43:31 connection error from 127.0.0.1:52037: ConnectionResetError
+22:43:32 [8a5f887c] incomplete chunk @4202496: [Errno 54] Connection reset by peer
+[switching]    43.1%   4,315,136/10,010,534  chunk=110KiB     264 KiB/s
+22:43:32 connection error from 127.0.0.1:52039: ConnectionResetError
+[switching]    45.5%   4,558,848/10,010,534  chunk=238KiB     386 KiB/s
+22:43:32 connection error from 127.0.0.1:52041: ConnectionResetError
+[switching]    49.3%   4,933,632/10,010,534  chunk=366KiB     447 KiB/s
+22:43:33 connection error from 127.0.0.1:52043: ConnectionResetError
+[switching]    54.3%   5,439,488/10,010,534  chunk=494KiB     416 KiB/s
+22:43:34 connection error from 127.0.0.1:52045: ConnectionResetError
+[switching]   chunk @5,439,488 (494 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:43:35 [8a5f887c] incomplete chunk @5439488: [Errno 54] Connection reset by peer
+22:43:36 connection error from 127.0.0.1:52049: ConnectionResetError
+[switching]    56.9%   5,692,416/10,010,534  chunk=247KiB     161 KiB/s
+22:43:37 connection error from 127.0.0.1:52053: ConnectionResetError
+[switching]   chunk @5,692,416 (247 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:43:38 [8a5f887c] incomplete chunk @5692416: [Errno 54] Connection reset by peer
+22:43:39 connection error from 127.0.0.1:52061: ConnectionResetError
+[switching]    58.1%   5,818,880/10,010,534  chunk=123KiB     301 KiB/s
+22:43:40 connection error from 127.0.0.1:52065: ConnectionResetError
+[switching]    60.7%   6,076,416/10,010,534  chunk=251KiB     524 KiB/s
+22:43:40 connection error from 127.0.0.1:52067: ConnectionResetError
+[switching]    64.6%   6,465,024/10,010,534  chunk=379KiB     443 KiB/s
+22:43:41 connection error from 127.0.0.1:52069: ConnectionResetError
+[switching]    69.8%   6,984,704/10,010,534  chunk=507KiB     549 KiB/s
+22:43:42 connection error from 127.0.0.1:52071: ConnectionResetError
+[switching]   chunk @6,984,704 (635 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:43:47 [8a5f887c] incomplete chunk @6984704: [Errno 54] Connection reset by peer
+22:43:48 connection error from 127.0.0.1:52076: ConnectionResetError
+[switching]    73.0%   7,310,080/10,010,534  chunk=317KiB     232 KiB/s
+22:43:49 connection error from 127.0.0.1:52078: ConnectionResetError
+[switching]    76.3%   7,635,456/10,010,534  chunk=317KiB     204 KiB/s
+22:43:51 connection error from 127.0.0.1:52080: ConnectionResetError
+[switching]    79.5%   7,960,832/10,010,534  chunk=317KiB     524 KiB/s
+22:43:51 connection error from 127.0.0.1:52082: ConnectionResetError
+[switching]    84.1%   8,417,280/10,010,534  chunk=445KiB     549 KiB/s
+22:43:52 connection error from 127.0.0.1:52085: ConnectionResetError
+[switching]    90.0%   9,004,800/10,010,534  chunk=573KiB     498 KiB/s
+22:43:53 connection error from 127.0.0.1:52087: ConnectionResetError
+[switching]   chunk @9,004,800 (573 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:43:58 [8a5f887c] incomplete chunk @9004800: [Errno 54] Connection reset by peer
+22:43:59 connection error from 127.0.0.1:52091: ConnectionResetError
+[switching]    92.9%   9,298,560/10,010,534  chunk=286KiB     187 KiB/s
+22:44:01 connection error from 127.0.0.1:52093: ConnectionResetError
+[switching]    95.8%   9,592,320/10,010,534  chunk=286KiB     238 KiB/s
+22:44:02 connection error from 127.0.0.1:52095: ConnectionResetError
+[switching]    98.8%   9,886,080/10,010,534  chunk=286KiB     175 KiB/s
+22:44:04 connection error from 127.0.0.1:52097: ConnectionResetError
+[switching]   100.0%  10,010,534/10,010,534  chunk=121KiB     301 KiB/s
+22:44:04 connection error from 127.0.0.1:52099: ConnectionResetError
+22:44:04 [8a5f887c] VERIFIED 10,010,534 B in 69.82s; analysing…
+22:44:06 [8a5f887c] report: VALID_WITH_FRAME_ANOMALIES {'timestamp_gap': 1, 'abrupt_change': 1}
+[switching] RESULT SUCCESS in 71.64s  {"retries": 10, "timeouts": 3, "conn_errors": 7, "hash_rejects": 0, "offset_resyncs": 0, "path_switches": 1, "chunks_sent": 29, "bytes_sent": 10010534, "duplicate_acks": 0}
+22:44:06 connection error from 127.0.0.1:52101: ConnectionResetError
+===== switching: PASS
+
+===== hostile: Fluctuating speed + resets + in-flight corruption
+[hostile] uploading ./samples/source_24fps.mp4 (10,769,529 B) sha256=8f3b7b68c11487e6…
+22:44:06 [c43aad20] new upload source_24fps.mp4 10,769,529 B
+22:44:07 connection error from 127.0.0.1:52104: ConnectionResetError
+22:44:07 [c43aad20] chunk @0 hash mismatch -> rejected
+[hostile]   chunk @0 rejected by server (hash mismatch) – resending
+22:44:08 connection error from 127.0.0.1:52106: ConnectionResetError
+22:44:08 connection error from 127.0.0.1:52108: ConnectionResetError
+[hostile]     1.2%     131,072/10,769,529  chunk=128KiB     697 KiB/s
+22:44:08 connection error from 127.0.0.1:52110: ConnectionResetError
+22:44:08 [c43aad20] chunk @131072 hash mismatch -> rejected
+[hostile]   chunk @131,072 rejected by server (hash mismatch) – resending
+22:44:08 connection error from 127.0.0.1:52112: ConnectionResetError
+22:44:09 connection error from 127.0.0.1:52114: ConnectionResetError
+22:44:10 [c43aad20] chunk @131072 hash mismatch -> rejected
+[hostile]   chunk @131,072 rejected by server (hash mismatch) – resending
+22:44:10 connection error from 127.0.0.1:52116: ConnectionResetError
+22:44:13 connection error from 127.0.0.1:52119: ConnectionResetError
+[hostile]     1.5%     163,840/10,769,529  chunk=32KiB     134 KiB/s
+22:44:14 connection error from 127.0.0.1:52121: ConnectionResetError
+22:44:14 [c43aad20] chunk @163840 hash mismatch -> rejected
+[hostile]   chunk @163,840 rejected by server (hash mismatch) – resending
+22:44:14 connection error from 127.0.0.1:52123: ConnectionResetError
+22:44:15 connection error from 127.0.0.1:52125: ConnectionResetError
+[hostile]     2.3%     245,760/10,769,529  chunk=80KiB      95 KiB/s
+22:44:16 connection error from 127.0.0.1:52127: ConnectionResetError
+[hostile]   chunk @245,760 (208 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:44:16 [c43aad20] incomplete chunk @245760: [Errno 54] Connection reset by peer
+22:44:17 connection error from 127.0.0.1:52131: ConnectionResetError
+22:44:17 [c43aad20] chunk @245760 hash mismatch -> rejected
+[hostile]   chunk @245,760 rejected by server (hash mismatch) – resending
+22:44:17 connection error from 127.0.0.1:52133: ConnectionResetError
+22:44:18 connection error from 127.0.0.1:52135: ConnectionResetError
+[hostile]     2.8%     299,008/10,769,529  chunk=52KiB     168 KiB/s
+22:44:18 connection error from 127.0.0.1:52137: ConnectionResetError
+22:44:19 [c43aad20] chunk @299008 hash mismatch -> rejected
+[hostile]   chunk @299,008 rejected by server (hash mismatch) – resending
+22:44:19 connection error from 127.0.0.1:52139: ConnectionResetError
+22:44:20 connection error from 127.0.0.1:52141: ConnectionResetError
+22:44:20 [c43aad20] chunk @299008 hash mismatch -> rejected
+[hostile]   chunk @299,008 rejected by server (hash mismatch) – resending
+22:44:21 connection error from 127.0.0.1:52143: ConnectionResetError
+22:44:22 connection error from 127.0.0.1:52146: ConnectionResetError
+22:44:22 [c43aad20] chunk @299008 hash mismatch -> rejected
+[hostile]   chunk @299,008 rejected by server (hash mismatch) – resending
+22:44:23 connection error from 127.0.0.1:52148: ConnectionResetError
+22:44:24 connection error from 127.0.0.1:52150: ConnectionResetError
+[hostile]     3.1%     331,776/10,769,529  chunk=32KiB     361 KiB/s
+22:44:24 connection error from 127.0.0.1:52152: ConnectionResetError
+[hostile]   chunk @331,776 (160 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:44:24 [c43aad20] incomplete chunk @331776: [Errno 54] Connection reset by peer
+22:44:25 connection error from 127.0.0.1:52156: ConnectionResetError
+[hostile]     3.8%     413,696/10,769,529  chunk=80KiB     576 KiB/s
+22:44:25 connection error from 127.0.0.1:52158: ConnectionResetError
+[hostile]   chunk @413,696 (208 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:44:26 [c43aad20] incomplete chunk @413696: [Errno 54] Connection reset by peer
+22:44:26 connection error from 127.0.0.1:52162: ConnectionResetError
+22:44:26 [c43aad20] chunk @413696 hash mismatch -> rejected
+[hostile]   chunk @413,696 rejected by server (hash mismatch) – resending
+22:44:26 connection error from 127.0.0.1:52164: ConnectionResetError
+22:44:28 connection error from 127.0.0.1:52166: ConnectionResetError
+[hostile]     4.3%     466,944/10,769,529  chunk=52KiB     407 KiB/s
+22:44:28 connection error from 127.0.0.1:52168: ConnectionResetError
+[hostile]   chunk @466,944 (180 KiB) failed: timeout: timed out
+22:44:33 [c43aad20] incomplete chunk @466944: [Errno 54] Connection reset by peer
+22:44:33 connection error from 127.0.0.1:52172: ConnectionResetError
+[hostile]     5.2%     559,104/10,769,529  chunk=90KiB     144 KiB/s
+22:44:33 connection error from 127.0.0.1:52174: ConnectionResetError
+[hostile]     7.3%     782,336/10,769,529  chunk=218KiB     260 KiB/s
+22:44:34 connection error from 127.0.0.1:52176: ConnectionResetError
+[hostile]   chunk @782,336 (346 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:44:35 [c43aad20] incomplete chunk @782336: [Errno 54] Connection reset by peer
+22:44:36 connection error from 127.0.0.1:52180: ConnectionResetError
+[hostile]     8.9%     959,488/10,769,529  chunk=173KiB     163 KiB/s
+22:44:37 connection error from 127.0.0.1:52182: ConnectionResetError
+[hostile]   chunk @959,488 (173 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:44:38 [c43aad20] incomplete chunk @959488: [Errno 54] Connection reset by peer
+22:44:38 connection error from 127.0.0.1:52186: ConnectionResetError
+[hostile]     9.7%   1,048,064/10,769,529  chunk=86KiB     199 KiB/s
+22:44:39 connection error from 127.0.0.1:52188: ConnectionResetError
+22:44:39 [c43aad20] chunk @1048064 hash mismatch -> rejected
+[hostile]   chunk @1,048,064 rejected by server (hash mismatch) – resending
+22:44:39 connection error from 127.0.0.1:52190: ConnectionResetError
+22:44:40 connection error from 127.0.0.1:52192: ConnectionResetError
+[hostile]    10.8%   1,157,888/10,769,529  chunk=107KiB     648 KiB/s
+22:44:40 connection error from 127.0.0.1:52194: ConnectionResetError
+[hostile]   chunk @1,157,888 (235 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:44:40 connection error from 127.0.0.1:52196: ConnectionResetError
+22:44:41 connection error from 127.0.0.1:52198: ConnectionResetError
+[hostile]    11.9%   1,278,336/10,769,529  chunk=117KiB     215 KiB/s
+22:44:42 connection error from 127.0.0.1:52200: ConnectionResetError
+22:44:43 [c43aad20] chunk @1278336 hash mismatch -> rejected
+[hostile]   chunk @1,278,336 rejected by server (hash mismatch) – resending
+22:44:43 connection error from 127.0.0.1:52202: ConnectionResetError
+22:44:44 connection error from 127.0.0.1:52204: ConnectionResetError
+[hostile]    13.0%   1,404,096/10,769,529  chunk=122KiB      87 KiB/s
+22:44:46 connection error from 127.0.0.1:52206: ConnectionResetError
+[hostile]    14.2%   1,529,856/10,769,529  chunk=122KiB      88 KiB/s
+22:44:47 connection error from 127.0.0.1:52208: ConnectionResetError
+[hostile]   chunk @1,529,856 (122 KiB) failed: timeout: timed out
+22:44:52 connection error from 127.0.0.1:52212: ConnectionResetError
+[hostile]   chunk @1,529,856 (61 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:44:52 connection error from 127.0.0.1:52214: ConnectionResetError
+22:44:52 [c43aad20] incomplete chunk @1529856: [Errno 54] Connection reset by peer
+22:44:53 connection error from 127.0.0.1:52217: ConnectionResetError
+22:44:53 [c43aad20] chunk @1529856 hash mismatch -> rejected
+[hostile]   chunk @1,529,856 rejected by server (hash mismatch) – resending
+22:44:53 connection error from 127.0.0.1:52219: ConnectionResetError
+22:44:55 connection error from 127.0.0.1:52221: ConnectionResetError
+[hostile]    14.5%   1,562,624/10,769,529  chunk=32KiB      28 KiB/s
+22:44:56 connection error from 127.0.0.1:52223: ConnectionResetError
+[hostile]    14.8%   1,595,392/10,769,529  chunk=32KiB      27 KiB/s
+22:44:57 connection error from 127.0.0.1:52225: ConnectionResetError
+[hostile]    15.1%   1,628,160/10,769,529  chunk=32KiB      29 KiB/s
+22:44:58 connection error from 127.0.0.1:52227: ConnectionResetError
+[hostile]    15.4%   1,660,928/10,769,529  chunk=32KiB      28 KiB/s
+22:45:00 connection error from 127.0.0.1:52229: ConnectionResetError
+[hostile]    15.7%   1,693,696/10,769,529  chunk=32KiB      38 KiB/s
+22:45:00 connection error from 127.0.0.1:52231: ConnectionResetError
+22:45:01 [c43aad20] chunk @1693696 hash mismatch -> rejected
+[hostile]   chunk @1,693,696 rejected by server (hash mismatch) – resending
+22:45:02 connection error from 127.0.0.1:52233: ConnectionResetError
+22:45:02 connection error from 127.0.0.1:52235: ConnectionResetError
+[hostile]    16.5%   1,775,616/10,769,529  chunk=80KiB     565 KiB/s
+22:45:02 connection error from 127.0.0.1:52237: ConnectionResetError
+22:45:03 [c43aad20] chunk @1775616 hash mismatch -> rejected
+[hostile]   chunk @1,775,616 rejected by server (hash mismatch) – resending
+22:45:03 connection error from 127.0.0.1:52239: ConnectionResetError
+22:45:04 connection error from 127.0.0.1:52241: ConnectionResetError
+[hostile]    17.5%   1,882,112/10,769,529  chunk=104KiB     646 KiB/s
+22:45:04 connection error from 127.0.0.1:52243: ConnectionResetError
+[hostile]   chunk @1,882,112 (232 KiB) failed: timeout: timed out
+22:45:09 [c43aad20] incomplete chunk @1882112: [Errno 54] Connection reset by peer
+22:45:09 connection error from 127.0.0.1:52247: ConnectionResetError
+[hostile]    18.6%   2,000,896/10,769,529  chunk=116KiB      97 KiB/s
+22:45:10 connection error from 127.0.0.1:52249: ConnectionResetError
+[hostile]    19.7%   2,119,680/10,769,529  chunk=116KiB     130 KiB/s
+22:45:11 connection error from 127.0.0.1:52251: ConnectionResetError
+22:45:12 [c43aad20] chunk @2119680 hash mismatch -> rejected
+[hostile]   chunk @2,119,680 rejected by server (hash mismatch) – resending
+22:45:12 connection error from 127.0.0.1:52253: ConnectionResetError
+22:45:13 connection error from 127.0.0.1:52255: ConnectionResetError
+[hostile]    20.8%   2,244,608/10,769,529  chunk=122KiB     108 KiB/s
+22:45:15 connection error from 127.0.0.1:52257: ConnectionResetError
+[hostile]    22.0%   2,369,536/10,769,529  chunk=122KiB      66 KiB/s
+22:45:16 connection error from 127.0.0.1:52259: ConnectionResetError
+[hostile]    23.2%   2,494,464/10,769,529  chunk=122KiB     122 KiB/s
+22:45:17 connection error from 127.0.0.1:52261: ConnectionResetError
+[hostile]   chunk @2,494,464 (122 KiB) failed: timeout: timed out
+22:45:22 [c43aad20] incomplete chunk @2494464: [Errno 54] Connection reset by peer
+22:45:23 connection error from 127.0.0.1:52265: ConnectionResetError
+[hostile]   chunk @2,494,464 (61 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:45:24 connection error from 127.0.0.1:52268: ConnectionResetError
+22:45:25 connection error from 127.0.0.1:52270: ConnectionResetError
+[hostile]    23.5%   2,527,232/10,769,529  chunk=32KiB      50 KiB/s
+22:45:26 connection error from 127.0.0.1:52272: ConnectionResetError
+22:45:26 [c43aad20] chunk @2527232 hash mismatch -> rejected
+[hostile]   chunk @2,527,232 rejected by server (hash mismatch) – resending
+22:45:26 connection error from 127.0.0.1:52274: ConnectionResetError
+22:45:27 connection error from 127.0.0.1:52276: ConnectionResetError
+[hostile]   chunk @2,527,232 (80 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:45:28 [c43aad20] incomplete chunk @2527232: [Errno 54] Connection reset by peer
+22:45:29 connection error from 127.0.0.1:52280: ConnectionResetError
+[hostile]    23.8%   2,568,192/10,769,529  chunk=40KiB     367 KiB/s
+22:45:29 connection error from 127.0.0.1:52282: ConnectionResetError
+[hostile]    25.4%   2,740,224/10,769,529  chunk=168KiB     645 KiB/s
+22:45:30 connection error from 127.0.0.1:52284: ConnectionResetError
+22:45:30 [c43aad20] chunk @2740224 hash mismatch -> rejected
+[hostile]   chunk @2,740,224 rejected by server (hash mismatch) – resending
+22:45:30 connection error from 127.0.0.1:52286: ConnectionResetError
+22:45:31 connection error from 127.0.0.1:52288: ConnectionResetError
+22:45:31 [c43aad20] chunk @2740224 hash mismatch -> rejected
+[hostile]   chunk @2,740,224 rejected by server (hash mismatch) – resending
+22:45:31 connection error from 127.0.0.1:52290: ConnectionResetError
+22:45:33 connection error from 127.0.0.1:52292: ConnectionResetError
+[hostile]   chunk @2,740,224 (74 KiB) failed: timeout: timed out
+22:45:38 [c43aad20] incomplete chunk @2740224: [Errno 54] Connection reset by peer
+22:45:38 connection error from 127.0.0.1:52296: ConnectionResetError
+[hostile]    25.8%   2,778,112/10,769,529  chunk=37KiB     161 KiB/s
+22:45:39 connection error from 127.0.0.1:52298: ConnectionResetError
+[hostile]    27.4%   2,947,072/10,769,529  chunk=165KiB     327 KiB/s
+22:45:39 connection error from 127.0.0.1:52300: ConnectionResetError
+[hostile]   chunk @2,947,072 (293 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:45:40 [c43aad20] incomplete chunk @2947072: [Errno 54] Connection reset by peer
+22:45:40 connection error from 127.0.0.1:52304: ConnectionResetError
+22:45:40 [c43aad20] chunk @2947072 hash mismatch -> rejected
+[hostile]   chunk @2,947,072 rejected by server (hash mismatch) – resending
+22:45:41 connection error from 127.0.0.1:52306: ConnectionResetError
+22:45:42 connection error from 127.0.0.1:52308: ConnectionResetError
+[hostile]    28.1%   3,022,080/10,769,529  chunk=73KiB      78 KiB/s
+22:45:43 connection error from 127.0.0.1:52310: ConnectionResetError
+[hostile]    30.0%   3,228,160/10,769,529  chunk=201KiB     221 KiB/s
+22:45:44 connection error from 127.0.0.1:52312: ConnectionResetError
+22:45:45 [c43aad20] chunk @3228160 hash mismatch -> rejected
+[hostile]   chunk @3,228,160 rejected by server (hash mismatch) – resending
+22:45:45 connection error from 127.0.0.1:52314: ConnectionResetError
+22:45:46 connection error from 127.0.0.1:52316: ConnectionResetError
+[hostile]   chunk @3,228,160 (164 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:45:46 [c43aad20] incomplete chunk @3228160: [Errno 54] Connection reset by peer
+22:45:48 connection error from 127.0.0.1:52320: ConnectionResetError
+[hostile]    30.8%   3,312,448/10,769,529  chunk=82KiB     110 KiB/s
+22:45:49 connection error from 127.0.0.1:52322: ConnectionResetError
+[hostile]    32.8%   3,527,808/10,769,529  chunk=210KiB     752 KiB/s
+22:45:49 connection error from 127.0.0.1:52324: ConnectionResetError
+22:45:50 [c43aad20] chunk @3527808 hash mismatch -> rejected
+[hostile]   chunk @3,527,808 rejected by server (hash mismatch) – resending
+22:45:50 connection error from 127.0.0.1:52326: ConnectionResetError
+22:45:50 connection error from 127.0.0.1:52328: ConnectionResetError
+[hostile]   chunk @3,527,808 (169 KiB) failed: timeout: timed out
+22:45:55 [c43aad20] incomplete chunk @3527808: [Errno 54] Connection reset by peer
+22:45:55 connection error from 127.0.0.1:52333: ConnectionResetError
+[hostile]    33.6%   3,614,416/10,769,529  chunk=84KiB     123 KiB/s
+22:45:56 connection error from 127.0.0.1:52335: ConnectionResetError
+22:45:57 [c43aad20] chunk @3614416 hash mismatch -> rejected
+[hostile]   chunk @3,614,416 rejected by server (hash mismatch) – resending
+22:45:57 connection error from 127.0.0.1:52337: ConnectionResetError
+22:45:58 connection error from 127.0.0.1:52339: ConnectionResetError
+22:45:58 [c43aad20] chunk @3614416 hash mismatch -> rejected
+[hostile]   chunk @3,614,416 rejected by server (hash mismatch) – resending
+22:45:58 connection error from 127.0.0.1:52341: ConnectionResetError
+22:46:00 connection error from 127.0.0.1:52343: ConnectionResetError
+[hostile]    34.1%   3,668,836/10,769,529  chunk=53KiB     481 KiB/s
+22:46:00 connection error from 127.0.0.1:52345: ConnectionResetError
+[hostile]    35.8%   3,854,328/10,769,529  chunk=181KiB     757 KiB/s
+22:46:00 connection error from 127.0.0.1:52347: ConnectionResetError
+22:46:00 [c43aad20] chunk @3854328 hash mismatch -> rejected
+[hostile]   chunk @3,854,328 rejected by server (hash mismatch) – resending
+22:46:00 connection error from 127.0.0.1:52349: ConnectionResetError
+22:46:01 connection error from 127.0.0.1:52351: ConnectionResetError
+22:46:03 connection error from 127.0.0.1:52353: ConnectionResetError
+[hostile]    36.5%   3,933,469/10,769,529  chunk=77KiB     323 KiB/s
+22:46:03 connection error from 127.0.0.1:52355: ConnectionResetError
+[hostile]    38.5%   4,143,682/10,769,529  chunk=205KiB     475 KiB/s
+22:46:03 connection error from 127.0.0.1:52357: ConnectionResetError
+22:46:04 [c43aad20] chunk @4143682 hash mismatch -> rejected
+[hostile]   chunk @4,143,682 rejected by server (hash mismatch) – resending
+22:46:04 connection error from 127.0.0.1:52359: ConnectionResetError
+22:46:04 connection error from 127.0.0.1:52361: ConnectionResetError
+[hostile]    40.1%   4,314,324/10,769,529  chunk=166KiB     494 KiB/s
+22:46:05 connection error from 127.0.0.1:52363: ConnectionResetError
+[hostile]   chunk @4,314,324 (294 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:46:05 [c43aad20] incomplete chunk @4314324: [Errno 54] Connection reset by peer
+22:46:07 connection error from 127.0.0.1:52367: ConnectionResetError
+[hostile]    41.5%   4,465,181/10,769,529  chunk=147KiB     151 KiB/s
+22:46:08 connection error from 127.0.0.1:52369: ConnectionResetError
+[hostile]    44.1%   4,747,110/10,769,529  chunk=275KiB     249 KiB/s
+22:46:09 connection error from 127.0.0.1:52371: ConnectionResetError
+[hostile]   chunk @4,747,110 (275 KiB) failed: timeout: timed out
+22:46:14 [c43aad20] incomplete chunk @4747110: [Errno 54] Connection reset by peer
+22:46:14 connection error from 127.0.0.1:52375: ConnectionResetError
+[hostile]   chunk @4,747,110 (137 KiB) failed: timeout: timed out
+22:46:19 [c43aad20] incomplete chunk @4747110: [Errno 54] Connection reset by peer
+22:46:20 connection error from 127.0.0.1:52381: ConnectionResetError
+22:46:20 [c43aad20] chunk @4747110 hash mismatch -> rejected
+[hostile]   chunk @4,747,110 rejected by server (hash mismatch) – resending
+22:46:21 connection error from 127.0.0.1:52384: ConnectionResetError
+22:46:23 connection error from 127.0.0.1:52386: ConnectionResetError
+[hostile]    44.4%   4,782,351/10,769,529  chunk=34KiB      47 KiB/s
+22:46:24 connection error from 127.0.0.1:52388: ConnectionResetError
+22:46:25 [c43aad20] chunk @4782351 hash mismatch -> rejected
+[hostile]   chunk @4,782,351 rejected by server (hash mismatch) – resending
+22:46:25 connection error from 127.0.0.1:52391: ConnectionResetError
+22:46:26 connection error from 127.0.0.1:52393: ConnectionResetError
+22:46:26 [c43aad20] chunk @4782351 hash mismatch -> rejected
+[hostile]   chunk @4,782,351 rejected by server (hash mismatch) – resending
+22:46:26 connection error from 127.0.0.1:52395: ConnectionResetError
+22:46:28 connection error from 127.0.0.1:52397: ConnectionResetError
+[hostile]    44.8%   4,823,929/10,769,529  chunk=40KiB     432 KiB/s
+22:46:28 connection error from 127.0.0.1:52399: ConnectionResetError
+[hostile]    46.4%   4,996,579/10,769,529  chunk=168KiB     764 KiB/s
+22:46:28 connection error from 127.0.0.1:52401: ConnectionResetError
+[hostile]    49.2%   5,300,301/10,769,529  chunk=296KiB     802 KiB/s
+22:46:28 connection error from 127.0.0.1:52403: ConnectionResetError
+22:46:29 [c43aad20] chunk @5300301 hash mismatch -> rejected
+[hostile]   chunk @5,300,301 rejected by server (hash mismatch) – resending
+22:46:29 connection error from 127.0.0.1:52405: ConnectionResetError
+22:46:30 connection error from 127.0.0.1:52408: ConnectionResetError
+[hostile]    51.2%   5,517,698/10,769,529  chunk=212KiB     800 KiB/s
+22:46:30 connection error from 127.0.0.1:52410: ConnectionResetError
+[hostile]   chunk @5,517,698 (340 KiB) failed: timeout: timed out
+22:46:35 connection error from 127.0.0.1:52417: ConnectionResetError
+22:46:35 [c43aad20] incomplete chunk @5517698: [Errno 54] Connection reset by peer
+22:46:35 [c43aad20] chunk @5517698 hash mismatch -> rejected
+[hostile]   chunk @5,517,698 rejected by server (hash mismatch) – resending
+22:46:35 connection error from 127.0.0.1:52419: ConnectionResetError
+22:46:37 connection error from 127.0.0.1:52421: ConnectionResetError
+22:46:37 [c43aad20] chunk @5517698 hash mismatch -> rejected
+[hostile]   chunk @5,517,698 rejected by server (hash mismatch) – resending
+22:46:37 connection error from 127.0.0.1:52423: ConnectionResetError
+22:46:41 connection error from 127.0.0.1:52426: ConnectionResetError
+[hostile]    51.6%   5,561,256/10,769,529  chunk=42KiB      65 KiB/s
+22:46:41 connection error from 127.0.0.1:52428: ConnectionResetError
+22:46:42 [c43aad20] chunk @5561256 hash mismatch -> rejected
+[hostile]   chunk @5,561,256 rejected by server (hash mismatch) – resending
+22:46:42 connection error from 127.0.0.1:52430: ConnectionResetError
+22:46:43 connection error from 127.0.0.1:52432: ConnectionResetError
+[hostile]    52.4%   5,648,571/10,769,529  chunk=85KiB     151 KiB/s
+22:46:43 connection error from 127.0.0.1:52434: ConnectionResetError
+[hostile]   chunk @5,648,571 (213 KiB) failed: timeout: timed out
+22:46:48 [c43aad20] incomplete chunk @5648571: [Errno 54] Connection reset by peer
+22:46:48 connection error from 127.0.0.1:52440: ConnectionResetError
+[hostile]    53.5%   5,757,764/10,769,529  chunk=106KiB     139 KiB/s
+22:46:49 connection error from 127.0.0.1:52442: ConnectionResetError
+[hostile]    55.7%   5,998,029/10,769,529  chunk=234KiB     183 KiB/s
+22:46:50 connection error from 127.0.0.1:52444: ConnectionResetError
+[hostile]   chunk @5,998,029 (234 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:46:51 [c43aad20] incomplete chunk @5998029: [Errno 54] Connection reset by peer
+22:46:52 connection error from 127.0.0.1:52448: ConnectionResetError
+[hostile]    56.8%   6,118,161/10,769,529  chunk=117KiB     473 KiB/s
+22:46:52 connection error from 127.0.0.1:52450: ConnectionResetError
+[hostile]   chunk @6,118,161 (245 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:46:53 [c43aad20] incomplete chunk @6118161: [Errno 54] Connection reset by peer
+22:46:54 connection error from 127.0.0.1:52454: ConnectionResetError
+22:46:55 [c43aad20] chunk @6118161 hash mismatch -> rejected
+[hostile]   chunk @6,118,161 rejected by server (hash mismatch) – resending
+22:46:55 connection error from 127.0.0.1:52456: ConnectionResetError
+22:46:57 connection error from 127.0.0.1:52459: ConnectionResetError
+22:46:57 [c43aad20] chunk @6118161 hash mismatch -> rejected
+[hostile]   chunk @6,118,161 rejected by server (hash mismatch) – resending
+22:46:57 connection error from 127.0.0.1:52461: ConnectionResetError
+22:47:00 connection error from 127.0.0.1:52463: ConnectionResetError
+[hostile]    57.1%   6,150,929/10,769,529  chunk=32KiB      34 KiB/s
+22:47:01 connection error from 127.0.0.1:52465: ConnectionResetError
+[hostile]    58.6%   6,314,769/10,769,529  chunk=160KiB      96 KiB/s
+22:47:02 connection error from 127.0.0.1:52468: ConnectionResetError
+22:47:03 [c43aad20] chunk @6314769 hash mismatch -> rejected
+[hostile]   chunk @6,314,769 rejected by server (hash mismatch) – resending
+22:47:04 connection error from 127.0.0.1:52470: ConnectionResetError
+22:47:05 connection error from 127.0.0.1:52472: ConnectionResetError
+[hostile]    59.4%   6,396,689/10,769,529  chunk=80KiB     105 KiB/s
+22:47:06 connection error from 127.0.0.1:52474: ConnectionResetError
+[hostile]   chunk @6,396,689 (208 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:47:07 [c43aad20] incomplete chunk @6396689: [Errno 54] Connection reset by peer
+22:47:07 connection error from 127.0.0.1:52478: ConnectionResetError
+[hostile]    60.4%   6,503,185/10,769,529  chunk=104KiB     183 KiB/s
+22:47:08 connection error from 127.0.0.1:52480: ConnectionResetError
+[hostile]   chunk @6,503,185 (232 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:47:13 [c43aad20] incomplete chunk @6503185: [Errno 54] Connection reset by peer
+22:47:14 connection error from 127.0.0.1:52484: ConnectionResetError
+[hostile]    61.5%   6,621,969/10,769,529  chunk=116KiB     225 KiB/s
+22:47:15 connection error from 127.0.0.1:52486: ConnectionResetError
+22:47:15 [c43aad20] chunk @6621969 hash mismatch -> rejected
+[hostile]   chunk @6,621,969 rejected by server (hash mismatch) – resending
+22:47:15 connection error from 127.0.0.1:52488: ConnectionResetError
+22:47:16 connection error from 127.0.0.1:52490: ConnectionResetError
+[hostile]    62.6%   6,746,897/10,769,529  chunk=122KiB     682 KiB/s
+22:47:16 connection error from 127.0.0.1:52492: ConnectionResetError
+[hostile]    65.0%   7,002,897/10,769,529  chunk=250KiB     807 KiB/s
+22:47:16 connection error from 127.0.0.1:52494: ConnectionResetError
+22:47:17 [c43aad20] chunk @7002897 hash mismatch -> rejected
+[hostile]   chunk @7,002,897 rejected by server (hash mismatch) – resending
+22:47:17 connection error from 127.0.0.1:52496: ConnectionResetError
+22:47:18 connection error from 127.0.0.1:52498: ConnectionResetError
+[hostile]    66.8%   7,196,433/10,769,529  chunk=189KiB     219 KiB/s
+22:47:18 connection error from 127.0.0.1:52500: ConnectionResetError
+[hostile]    69.8%   7,521,041/10,769,529  chunk=317KiB     276 KiB/s
+22:47:20 connection error from 127.0.0.1:52502: ConnectionResetError
+[hostile]   chunk @7,521,041 (317 KiB) failed: timeout: timed out
+22:47:25 [c43aad20] incomplete chunk @7521041: [Errno 54] Connection reset by peer
+22:47:25 connection error from 127.0.0.1:52506: ConnectionResetError
+22:47:26 [c43aad20] chunk @7521041 hash mismatch -> rejected
+[hostile]   chunk @7,521,041 rejected by server (hash mismatch) – resending
+22:47:27 connection error from 127.0.0.1:52508: ConnectionResetError
+22:47:29 connection error from 127.0.0.1:52511: ConnectionResetError
+[hostile]    70.6%   7,602,193/10,769,529  chunk=79KiB     101 KiB/s
+22:47:30 connection error from 127.0.0.1:52513: ConnectionResetError
+[hostile]    72.6%   7,814,417/10,769,529  chunk=207KiB     780 KiB/s
+22:47:30 connection error from 127.0.0.1:52515: ConnectionResetError
+22:47:30 [c43aad20] chunk @7814417 hash mismatch -> rejected
+[hostile]   chunk @7,814,417 rejected by server (hash mismatch) – resending
+22:47:30 connection error from 127.0.0.1:52517: ConnectionResetError
+22:47:31 connection error from 127.0.0.1:52519: ConnectionResetError
+[hostile]   chunk @7,814,417 (167 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:47:31 [c43aad20] incomplete chunk @7814417: [Errno 54] Connection reset by peer
+22:47:32 connection error from 127.0.0.1:52523: ConnectionResetError
+[hostile]    73.4%   7,900,241/10,769,529  chunk=83KiB     222 KiB/s
+22:47:32 connection error from 127.0.0.1:52525: ConnectionResetError
+[hostile]    75.4%   8,117,137/10,769,529  chunk=211KiB     554 KiB/s
+22:47:33 connection error from 127.0.0.1:52527: ConnectionResetError
+[hostile]   chunk @8,117,137 (339 KiB) failed: timeout: timed out
+22:47:37 connection error from 127.0.0.1:52531: ConnectionResetError
+22:47:38 [c43aad20] incomplete chunk @8117137: [Errno 54] Connection reset by peer
+[hostile]    77.0%   8,291,121/10,769,529  chunk=169KiB     542 KiB/s
+22:47:38 connection error from 127.0.0.1:52533: ConnectionResetError
+[hostile]    79.8%   8,596,177/10,769,529  chunk=297KiB     672 KiB/s
+22:47:38 connection error from 127.0.0.1:52535: ConnectionResetError
+[hostile]   chunk @8,596,177 (425 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:47:38 [c43aad20] incomplete chunk @8596177: [Errno 54] Connection reset by peer
+22:47:39 connection error from 127.0.0.1:52539: ConnectionResetError
+22:47:39 [c43aad20] chunk @8596177 hash mismatch -> rejected
+[hostile]   chunk @8,596,177 rejected by server (hash mismatch) – resending
+22:47:39 connection error from 127.0.0.1:52541: ConnectionResetError
+22:47:40 connection error from 127.0.0.1:52543: ConnectionResetError
+[hostile]    80.8%   8,705,209/10,769,529  chunk=106KiB     349 KiB/s
+22:47:40 connection error from 127.0.0.1:52545: ConnectionResetError
+22:47:41 [c43aad20] chunk @8705209 hash mismatch -> rejected
+[hostile]   chunk @8,705,209 rejected by server (hash mismatch) – resending
+22:47:41 connection error from 127.0.0.1:52547: ConnectionResetError
+22:47:41 connection error from 127.0.0.1:52549: ConnectionResetError
+[hostile]   chunk @8,705,209 (117 KiB) failed: timeout: timed out
+22:47:46 connection error from 127.0.0.1:52551: ConnectionResetError
+22:47:47 connection error from 127.0.0.1:52553: ConnectionResetError
+[hostile]    81.4%   8,765,235/10,769,529  chunk=58KiB      97 KiB/s
+22:47:48 connection error from 127.0.0.1:52555: ConnectionResetError
+[hostile]    83.2%   8,956,333/10,769,529  chunk=186KiB     228 KiB/s
+22:47:49 connection error from 127.0.0.1:52557: ConnectionResetError
+[hostile]   chunk @8,956,333 (314 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:47:49 [c43aad20] incomplete chunk @8956333: [Errno 54] Connection reset by peer
+22:47:50 connection error from 127.0.0.1:52561: ConnectionResetError
+[hostile]    84.7%   9,117,418/10,769,529  chunk=157KiB     273 KiB/s
+22:47:51 connection error from 127.0.0.1:52563: ConnectionResetError
+22:47:51 [c43aad20] chunk @9117418 hash mismatch -> rejected
+[hostile]   chunk @9,117,418 rejected by server (hash mismatch) – resending
+22:47:51 connection error from 127.0.0.1:52565: ConnectionResetError
+22:47:52 connection error from 127.0.0.1:52567: ConnectionResetError
+[hostile]    86.0%   9,263,496/10,769,529  chunk=142KiB     719 KiB/s
+22:47:52 connection error from 127.0.0.1:52569: ConnectionResetError
+[hostile]    88.6%   9,540,646/10,769,529  chunk=270KiB     795 KiB/s
+22:47:52 connection error from 127.0.0.1:52571: ConnectionResetError
+[hostile]    92.4%   9,948,868/10,769,529  chunk=398KiB     671 KiB/s
+22:47:53 connection error from 127.0.0.1:52573: ConnectionResetError
+[hostile]   chunk @9,948,868 (526 KiB) failed: timeout: timed out
+22:47:58 [c43aad20] incomplete chunk @9948868: [Errno 54] Connection reset by peer
+22:47:58 connection error from 127.0.0.1:52577: ConnectionResetError
+22:47:59 [c43aad20] chunk @9948868 hash mismatch -> rejected
+[hostile]   chunk @9,948,868 rejected by server (hash mismatch) – resending
+22:47:59 connection error from 127.0.0.1:52579: ConnectionResetError
+22:48:00 connection error from 127.0.0.1:52581: ConnectionResetError
+22:48:01 [c43aad20] chunk @9948868 hash mismatch -> rejected
+[hostile]   chunk @9,948,868 rejected by server (hash mismatch) – resending
+22:48:01 connection error from 127.0.0.1:52583: ConnectionResetError
+22:48:04 connection error from 127.0.0.1:52585: ConnectionResetError
+[hostile]    93.0%  10,016,279/10,769,529  chunk=65KiB      54 KiB/s
+22:48:06 connection error from 127.0.0.1:52587: ConnectionResetError
+22:48:06 [c43aad20] chunk @10016279 hash mismatch -> rejected
+[hostile]   chunk @10,016,279 rejected by server (hash mismatch) – resending
+22:48:07 connection error from 127.0.0.1:52589: ConnectionResetError
+22:48:08 connection error from 127.0.0.1:52591: ConnectionResetError
+[hostile]    93.3%  10,049,984/10,769,529  chunk=32KiB      81 KiB/s
+22:48:08 connection error from 127.0.0.1:52593: ConnectionResetError
+22:48:08 [c43aad20] chunk @10049984 hash mismatch -> rejected
+[hostile]   chunk @10,049,984 rejected by server (hash mismatch) – resending
+22:48:09 connection error from 127.0.0.1:52595: ConnectionResetError
+22:48:10 connection error from 127.0.0.1:52597: ConnectionResetError
+[hostile]    94.1%  10,132,372/10,769,529  chunk=80KiB      91 KiB/s
+22:48:11 connection error from 127.0.0.1:52599: ConnectionResetError
+[hostile]   chunk @10,132,372 (208 KiB) failed: timeout: timed out
+22:48:16 connection error from 127.0.0.1:52601: ConnectionResetError
+22:48:17 connection error from 127.0.0.1:52603: ConnectionResetError
+[hostile]   chunk @10,132,372 (104 KiB) failed: timeout: timed out
+22:48:22 [c43aad20] incomplete chunk @10132372: [Errno 54] Connection reset by peer
+22:48:23 connection error from 127.0.0.1:52607: ConnectionResetError
+22:48:23 [c43aad20] chunk @10132372 hash mismatch -> rejected
+[hostile]   chunk @10,132,372 rejected by server (hash mismatch) – resending
+22:48:23 connection error from 127.0.0.1:52609: ConnectionResetError
+22:48:27 connection error from 127.0.0.1:52611: ConnectionResetError
+[hostile]    94.4%  10,165,140/10,769,529  chunk=32KiB      47 KiB/s
+22:48:28 connection error from 127.0.0.1:52613: ConnectionResetError
+22:48:28 [c43aad20] chunk @10165140 hash mismatch -> rejected
+[hostile]   chunk @10,165,140 rejected by server (hash mismatch) – resending
+22:48:28 connection error from 127.0.0.1:52615: ConnectionResetError
+22:48:28 connection error from 127.0.0.1:52617: ConnectionResetError
+22:48:28 [c43aad20] chunk @10165140 hash mismatch -> rejected
+[hostile]   chunk @10,165,140 rejected by server (hash mismatch) – resending
+22:48:28 connection error from 127.0.0.1:52619: ConnectionResetError
+22:48:29 connection error from 127.0.0.1:52621: ConnectionResetError
+[hostile]    94.8%  10,206,100/10,769,529  chunk=40KiB     423 KiB/s
+22:48:29 connection error from 127.0.0.1:52623: ConnectionResetError
+[hostile]    96.4%  10,378,132/10,769,529  chunk=168KiB     707 KiB/s
+22:48:29 connection error from 127.0.0.1:52625: ConnectionResetError
+22:48:30 [c43aad20] chunk @10378132 hash mismatch -> rejected
+[hostile]   chunk @10,378,132 rejected by server (hash mismatch) – resending
+22:48:30 connection error from 127.0.0.1:52627: ConnectionResetError
+22:48:31 connection error from 127.0.0.1:52629: ConnectionResetError
+[hostile]    97.8%  10,529,684/10,769,529  chunk=148KiB     703 KiB/s
+22:48:31 connection error from 127.0.0.1:52631: ConnectionResetError
+22:48:31 [c43aad20] chunk @10529684 hash mismatch -> rejected
+[hostile]   chunk @10,529,684 rejected by server (hash mismatch) – resending
+22:48:31 connection error from 127.0.0.1:52633: ConnectionResetError
+22:48:31 connection error from 127.0.0.1:52635: ConnectionResetError
+[hostile]    99.1%  10,670,996/10,769,529  chunk=138KiB     566 KiB/s
+22:48:32 connection error from 127.0.0.1:52637: ConnectionResetError
+[hostile]   100.0%  10,769,529/10,769,529  chunk=96KiB     423 KiB/s
+22:48:32 connection error from 127.0.0.1:52639: ConnectionResetError
+22:48:32 [c43aad20] VERIFIED 10,769,529 B in 265.66s; analysing…
+22:48:34 [c43aad20] report: VALID_NO_ANOMALIES {}
+[hostile] RESULT SUCCESS in 267.68s  {"retries": 88, "timeouts": 16, "conn_errors": 72, "hash_rejects": 51, "offset_resyncs": 0, "path_switches": 0, "chunks_sent": 85, "bytes_sent": 10769529, "duplicate_acks": 0}
+22:48:34 connection error from 127.0.0.1:52641: ConnectionResetError
+===== hostile: PASS
+
+===== crash_resume: Client crash at 40% then resume
+[crash_part1] uploading ./samples/clean_30fps.mp4 (10,634,479 B) sha256=df7d732f3643aee8…
+22:48:34 [9737099c] new upload clean_30fps.mp4 10,634,479 B
+22:48:34 connection error from 127.0.0.1:52644: ConnectionResetError
+[crash_part1]     2.5%     262,144/10,634,479  chunk=256KiB     150 KiB/s
+22:48:36 connection error from 127.0.0.1:52646: ConnectionResetError
+[crash_part1]     4.9%     524,288/10,634,479  chunk=256KiB     294 KiB/s
+22:48:37 connection error from 127.0.0.1:52649: ConnectionResetError
+[crash_part1]   chunk @524,288 (384 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:48:42 [9737099c] incomplete chunk @524288: [Errno 54] Connection reset by peer
+22:48:43 connection error from 127.0.0.1:52653: ConnectionResetError
+[crash_part1]   chunk @524,288 (192 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:48:44 [9737099c] incomplete chunk @524288: [Errno 54] Connection reset by peer
+22:48:46 connection error from 127.0.0.1:52657: ConnectionResetError
+[crash_part1]     5.9%     622,592/10,634,479  chunk=96KiB     731 KiB/s
+22:48:46 connection error from 127.0.0.1:52659: ConnectionResetError
+[crash_part1]     8.0%     851,968/10,634,479  chunk=224KiB     912 KiB/s
+22:48:46 connection error from 127.0.0.1:52661: ConnectionResetError
+[crash_part1]    11.4%   1,212,416/10,634,479  chunk=352KiB     959 KiB/s
+22:48:47 connection error from 127.0.0.1:52663: ConnectionResetError
+[crash_part1]   chunk @1,212,416 (480 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:48:47 [9737099c] incomplete chunk @1212416: [Errno 54] Connection reset by peer
+22:48:48 connection error from 127.0.0.1:52667: ConnectionResetError
+[crash_part1]    13.7%   1,458,176/10,634,479  chunk=240KiB     417 KiB/s
+22:48:48 connection error from 127.0.0.1:52669: ConnectionResetError
+[crash_part1]    17.3%   1,835,008/10,634,479  chunk=368KiB     333 KiB/s
+22:48:49 connection error from 127.0.0.1:52671: ConnectionResetError
+[crash_part1]   chunk @1,835,008 (368 KiB) failed: timeout: timed out
+22:48:54 connection error from 127.0.0.1:52675: ConnectionResetError
+[crash_part1]    19.0%   2,023,424/10,634,479  chunk=184KiB     785 KiB/s
+22:48:54 connection error from 127.0.0.1:52677: ConnectionResetError
+22:48:54 [9737099c] incomplete chunk @1835008: [Errno 54] Connection reset by peer
+[crash_part1]   chunk @2,023,424 (312 KiB) failed: timeout: timed out
+22:48:59 connection error from 127.0.0.1:52681: ConnectionResetError
+[crash_part1]   chunk @2,023,424 (156 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:48:59 [9737099c] incomplete chunk @2023424: [Errno 54] Connection reset by peer
+22:48:59 [9737099c] incomplete chunk @2023424: [Errno 54] Connection reset by peer
+22:49:00 connection error from 127.0.0.1:52685: ConnectionResetError
+[crash_part1]    19.8%   2,103,296/10,634,479  chunk=78KiB      63 KiB/s
+22:49:02 connection error from 127.0.0.1:52687: ConnectionResetError
+[crash_part1]    20.5%   2,183,168/10,634,479  chunk=78KiB      72 KiB/s
+22:49:03 connection error from 127.0.0.1:52689: ConnectionResetError
+[crash_part1]    21.3%   2,263,040/10,634,479  chunk=78KiB      89 KiB/s
+22:49:04 connection error from 127.0.0.1:52691: ConnectionResetError
+[crash_part1]   chunk @2,263,040 (206 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:49:04 [9737099c] incomplete chunk @2263040: [Errno 54] Connection reset by peer
+22:49:04 connection error from 127.0.0.1:52695: ConnectionResetError
+[crash_part1]    22.3%   2,368,512/10,634,479  chunk=103KiB     485 KiB/s
+22:49:05 connection error from 127.0.0.1:52697: ConnectionResetError
+[crash_part1]    24.5%   2,605,056/10,634,479  chunk=231KiB     649 KiB/s
+22:49:05 connection error from 127.0.0.1:52699: ConnectionResetError
+[crash_part1]   chunk @2,605,056 (359 KiB) failed: timeout: timed out
+22:49:10 [9737099c] incomplete chunk @2605056: [Errno 54] Connection reset by peer
+22:49:10 connection error from 127.0.0.1:52703: ConnectionResetError
+[crash_part1]   chunk @2,605,056 (179 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:49:11 [9737099c] incomplete chunk @2605056: [Errno 54] Connection reset by peer
+22:49:12 connection error from 127.0.0.1:52707: ConnectionResetError
+[crash_part1]    25.4%   2,696,960/10,634,479  chunk=89KiB      78 KiB/s
+22:49:14 connection error from 127.0.0.1:52709: ConnectionResetError
+[crash_part1]    26.2%   2,788,864/10,634,479  chunk=89KiB      81 KiB/s
+22:49:15 connection error from 127.0.0.1:52711: ConnectionResetError
+[crash_part1]    27.1%   2,880,768/10,634,479  chunk=89KiB      67 KiB/s
+22:49:16 connection error from 127.0.0.1:52713: ConnectionResetError
+[crash_part1]    28.0%   2,972,672/10,634,479  chunk=89KiB      83 KiB/s
+22:49:17 connection error from 127.0.0.1:52715: ConnectionResetError
+[crash_part1]    28.8%   3,064,576/10,634,479  chunk=89KiB      82 KiB/s
+22:49:18 connection error from 127.0.0.1:52717: ConnectionResetError
+[crash_part1]    29.7%   3,156,480/10,634,479  chunk=89KiB      75 KiB/s
+22:49:19 connection error from 127.0.0.1:52719: ConnectionResetError
+[crash_part1]    30.5%   3,248,384/10,634,479  chunk=89KiB      89 KiB/s
+22:49:20 connection error from 127.0.0.1:52721: ConnectionResetError
+[crash_part1]   chunk @3,248,384 (89 KiB) failed: timeout: timed out
+22:49:25 [9737099c] incomplete chunk @3248384: [Errno 54] Connection reset by peer
+22:49:26 connection error from 127.0.0.1:52729: ConnectionResetError
+[crash_part1]    31.0%   3,294,336/10,634,479  chunk=44KiB      67 KiB/s
+22:49:26 connection error from 127.0.0.1:52731: ConnectionResetError
+[crash_part1]    32.6%   3,471,360/10,634,479  chunk=172KiB     196 KiB/s
+22:49:27 connection error from 127.0.0.1:52733: ConnectionResetError
+[crash_part1]   chunk @3,471,360 (300 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:49:27 [9737099c] incomplete chunk @3471360: [Errno 54] Connection reset by peer
+22:49:29 connection error from 127.0.0.1:52737: ConnectionResetError
+[crash_part1]    34.1%   3,625,408/10,634,479  chunk=150KiB     207 KiB/s
+22:49:29 connection error from 127.0.0.1:52739: ConnectionResetError
+[crash_part1]    36.8%   3,910,528/10,634,479  chunk=278KiB     348 KiB/s
+22:49:30 connection error from 127.0.0.1:52743: ConnectionResetError
+[crash_part1]   chunk @3,910,528 (406 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:49:35 [9737099c] incomplete chunk @3910528: [Errno 54] Connection reset by peer
+22:49:36 connection error from 127.0.0.1:52747: ConnectionResetError
+[crash_part1]    38.7%   4,118,624/10,634,479  chunk=203KiB     485 KiB/s
+22:49:37 connection error from 127.0.0.1:52749: ConnectionResetError
+[crash_part1]   chunk @4,118,624 (331 KiB) failed: timeout: timed out
+22:49:42 [9737099c] incomplete chunk @4118624: [Errno 54] Connection reset by peer
+22:49:43 connection error from 127.0.0.1:52753: ConnectionResetError
+[crash_part1]    40.3%   4,288,208/10,634,479  chunk=165KiB     136 KiB/s
+22:49:44 connection error from 127.0.0.1:52755: ConnectionResetError
+[crash_part1] RESULT CRASHED in 70.49s  {"retries": 13, "timeouts": 5, "conn_errors": 8, "hash_rejects": 0, "offset_resyncs": 0, "path_switches": 0, "chunks_sent": 26, "bytes_sent": 4288208, "duplicate_acks": 0}
+[crash_part2_resume] uploading ./samples/clean_30fps.mp4 (10,634,479 B) sha256=df7d732f3643aee8…
+22:49:45 [9737099c] resume requested; offset=4288208
+[crash_part2_resume]   resuming existing upload 9737099c at 4,288,208 bytes
+22:49:45 connection error from 127.0.0.1:52757: ConnectionResetError
+[crash_part2_resume]    42.8%   4,550,352/10,634,479  chunk=256KiB     506 KiB/s
+22:49:45 connection error from 127.0.0.1:52759: ConnectionResetError
+[crash_part2_resume]    46.5%   4,943,568/10,634,479  chunk=384KiB     796 KiB/s
+22:49:46 connection error from 127.0.0.1:52761: ConnectionResetError
+[crash_part2_resume]   chunk @4,943,568 (512 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:49:47 [9737099c] incomplete chunk @4943568: [Errno 54] Connection reset by peer
+22:49:48 connection error from 127.0.0.1:52765: ConnectionResetError
+[crash_part2_resume]    49.0%   5,205,712/10,634,479  chunk=256KiB     217 KiB/s
+22:49:49 connection error from 127.0.0.1:52767: ConnectionResetError
+[crash_part2_resume]   chunk @5,205,712 (256 KiB) failed: timeout: timed out
+22:49:54 [9737099c] incomplete chunk @5205712: [Errno 54] Connection reset by peer
+22:49:55 connection error from 127.0.0.1:52771: ConnectionResetError
+[crash_part2_resume]    50.2%   5,336,784/10,634,479  chunk=128KiB     115 KiB/s
+22:49:56 connection error from 127.0.0.1:52773: ConnectionResetError
+[crash_part2_resume]    51.4%   5,467,856/10,634,479  chunk=128KiB      93 KiB/s
+22:49:57 connection error from 127.0.0.1:52775: ConnectionResetError
+[crash_part2_resume]    52.6%   5,598,928/10,634,479  chunk=128KiB     126 KiB/s
+22:49:58 connection error from 127.0.0.1:52777: ConnectionResetError
+[crash_part2_resume]    53.9%   5,730,000/10,634,479  chunk=128KiB     110 KiB/s
+22:50:00 connection error from 127.0.0.1:52779: ConnectionResetError
+[crash_part2_resume]    55.1%   5,861,072/10,634,479  chunk=128KiB      87 KiB/s
+22:50:01 connection error from 127.0.0.1:52781: ConnectionResetError
+[crash_part2_resume]    56.3%   5,992,144/10,634,479  chunk=128KiB      87 KiB/s
+22:50:02 connection error from 127.0.0.1:52783: ConnectionResetError
+[crash_part2_resume]    57.6%   6,123,216/10,634,479  chunk=128KiB     116 KiB/s
+22:50:04 connection error from 127.0.0.1:52785: ConnectionResetError
+[crash_part2_resume]    58.8%   6,254,288/10,634,479  chunk=128KiB     105 KiB/s
+22:50:05 connection error from 127.0.0.1:52787: ConnectionResetError
+[crash_part2_resume]    60.0%   6,385,360/10,634,479  chunk=128KiB     821 KiB/s
+22:50:05 connection error from 127.0.0.1:52789: ConnectionResetError
+[crash_part2_resume]    62.5%   6,647,504/10,634,479  chunk=256KiB     946 KiB/s
+22:50:05 connection error from 127.0.0.1:52791: ConnectionResetError
+[crash_part2_resume]    66.2%   7,040,720/10,634,479  chunk=384KiB     531 KiB/s
+22:50:06 connection error from 127.0.0.1:52793: ConnectionResetError
+[crash_part2_resume]   chunk @7,040,720 (512 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:50:06 [9737099c] incomplete chunk @7040720: [Errno 54] Connection reset by peer
+22:50:07 connection error from 127.0.0.1:52797: ConnectionResetError
+[crash_part2_resume]    68.7%   7,302,864/10,634,479  chunk=256KiB     278 KiB/s
+22:50:08 connection error from 127.0.0.1:52799: ConnectionResetError
+[crash_part2_resume]    72.4%   7,696,080/10,634,479  chunk=384KiB     208 KiB/s
+22:50:10 connection error from 127.0.0.1:52801: ConnectionResetError
+[crash_part2_resume]    76.1%   8,089,296/10,634,479  chunk=384KiB     161 KiB/s
+22:50:12 connection error from 127.0.0.1:52803: ConnectionResetError
+[crash_part2_resume]    79.8%   8,482,512/10,634,479  chunk=384KiB     256 KiB/s
+22:50:14 connection error from 127.0.0.1:52805: ConnectionResetError
+[crash_part2_resume]   chunk @8,482,512 (384 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:50:19 [9737099c] incomplete chunk @8482512: [Errno 54] Connection reset by peer
+22:50:20 connection error from 127.0.0.1:52810: ConnectionResetError
+[crash_part2_resume]    81.6%   8,679,120/10,634,479  chunk=192KiB     118 KiB/s
+22:50:22 connection error from 127.0.0.1:52812: ConnectionResetError
+[crash_part2_resume]    83.5%   8,875,728/10,634,479  chunk=192KiB     112 KiB/s
+22:50:24 connection error from 127.0.0.1:52814: ConnectionResetError
+[crash_part2_resume]    85.3%   9,072,336/10,634,479  chunk=192KiB     157 KiB/s
+22:50:25 connection error from 127.0.0.1:52816: ConnectionResetError
+[crash_part2_resume]    87.2%   9,268,944/10,634,479  chunk=192KiB     917 KiB/s
+22:50:25 connection error from 127.0.0.1:52818: ConnectionResetError
+[crash_part2_resume]   chunk @9,268,944 (320 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:50:25 [9737099c] incomplete chunk @9268944: [Errno 54] Connection reset by peer
+22:50:26 connection error from 127.0.0.1:52822: ConnectionResetError
+[crash_part2_resume]    88.7%   9,432,784/10,634,479  chunk=160KiB     855 KiB/s
+22:50:26 connection error from 127.0.0.1:52824: ConnectionResetError
+[crash_part2_resume]    91.5%   9,727,696/10,634,479  chunk=288KiB     948 KiB/s
+22:50:26 connection error from 127.0.0.1:52826: ConnectionResetError
+[crash_part2_resume]    95.5%  10,153,680/10,634,479  chunk=416KiB    1050 KiB/s
+22:50:27 connection error from 127.0.0.1:52828: ConnectionResetError
+[crash_part2_resume]   chunk @10,153,680 (469 KiB) failed: timeout: timed out
+22:50:31 connection error from 127.0.0.1:52832: ConnectionResetError
+[crash_part2_resume]    98.1%  10,432,208/10,634,479  chunk=272KiB     698 KiB/s
+22:50:31 connection error from 127.0.0.1:52834: ConnectionResetError
+22:50:32 connection error from 127.0.0.1:52830: ConnectionResetError
+[crash_part2_resume]   100.0%  10,634,479/10,634,479  chunk=197KiB     615 KiB/s
+22:50:32 connection error from 127.0.0.1:52836: ConnectionResetError
+22:50:32 [9737099c] VERIFIED 10,634,479 B in 117.82s; analysing…
+22:50:33 [9737099c] report: VALID_NO_ANOMALIES {}
+[crash_part2_resume] RESULT SUCCESS in 49.94s  {"retries": 6, "timeouts": 2, "conn_errors": 4, "hash_rejects": 0, "offset_resyncs": 0, "path_switches": 0, "chunks_sent": 27, "bytes_sent": 6346271, "duplicate_acks": 0}
+22:50:34 connection error from 127.0.0.1:52838: ConnectionResetError
+===== crash_resume: PASS
+
+===== stall_detect: Dead network: stall must be reported, not success
+[stall_detect] uploading ./samples/clean_30fps.mp4 (10,634,479 B) sha256=df7d732f3643aee8…
+22:50:34 [68cd8b9b] new upload clean_30fps.mp4 10,634,479 B
+22:50:34 connection error from 127.0.0.1:52841: ConnectionResetError
+[stall_detect]     2.5%     262,144/10,634,479  chunk=256KiB    1193 KiB/s
+22:50:34 connection error from 127.0.0.1:52843: ConnectionResetError
+[stall_detect]     6.2%     655,360/10,634,479  chunk=384KiB    1303 KiB/s
+22:50:35 connection error from 127.0.0.1:52845: ConnectionResetError
+[stall_detect]    11.1%   1,179,648/10,634,479  chunk=512KiB    1362 KiB/s
+22:50:35 connection error from 127.0.0.1:52847: ConnectionResetError
+[stall_detect]    17.3%   1,835,008/10,634,479  chunk=640KiB    1375 KiB/s
+22:50:36 connection error from 127.0.0.1:52849: ConnectionResetError
+[stall_detect]    24.7%   2,621,440/10,634,479  chunk=768KiB    1407 KiB/s
+22:50:36 connection error from 127.0.0.1:52851: ConnectionResetError
+[stall_detect]   chunk @2,621,440 (896 KiB) failed: timeout: timed out
+22:50:41 connection error from 127.0.0.1:52853: ConnectionResetError
+22:50:46 connection error from 127.0.0.1:52855: ConnectionResetError
+22:50:52 connection error from 127.0.0.1:52857: ConnectionResetError
+[stall_detect] RESULT STALLED in 19.15s  {"retries": 3, "timeouts": 1, "conn_errors": 2, "hash_rejects": 0, "offset_resyncs": 0, "path_switches": 0, "chunks_sent": 5, "bytes_sent": 2621440, "duplicate_acks": 0}
+===== stall_detect: PASS
+
+===== altered: Altered (bit-flipped) video
+[file_altered.mp4] uploading ./samples/altered.mp4 (10,634,479 B) sha256=1954ef8e82279fdc…
+22:50:54 [35aa4da6] new upload altered.mp4 10,634,479 B
+22:50:54 connection error from 127.0.0.1:52859: ConnectionResetError
+[file_altered.mp4]   chunk @0 (256 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:50:59 [35aa4da6] incomplete chunk @0: [Errno 54] Connection reset by peer
+22:51:00 connection error from 127.0.0.1:52863: ConnectionResetError
+[file_altered.mp4]     1.2%     131,072/10,634,479  chunk=128KiB     175 KiB/s
+22:51:01 connection error from 127.0.0.1:52865: ConnectionResetError
+[file_altered.mp4]   chunk @131,072 (256 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:51:02 [35aa4da6] incomplete chunk @131072: [Errno 54] Connection reset by peer
+22:51:03 connection error from 127.0.0.1:52869: ConnectionResetError
+[file_altered.mp4]     2.5%     262,144/10,634,479  chunk=128KiB     188 KiB/s
+22:51:03 connection error from 127.0.0.1:52871: ConnectionResetError
+[file_altered.mp4]   chunk @262,144 (256 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:51:04 [35aa4da6] incomplete chunk @262144: [Errno 54] Connection reset by peer
+22:51:05 connection error from 127.0.0.1:52875: ConnectionResetError
+[file_altered.mp4]     3.7%     393,216/10,634,479  chunk=128KiB     295 KiB/s
+22:51:05 connection error from 127.0.0.1:52877: ConnectionResetError
+[file_altered.mp4]     6.2%     655,360/10,634,479  chunk=256KiB     969 KiB/s
+22:51:05 connection error from 127.0.0.1:52879: ConnectionResetError
+[file_altered.mp4]     9.9%   1,048,576/10,634,479  chunk=384KiB    1051 KiB/s
+22:51:06 connection error from 127.0.0.1:52881: ConnectionResetError
+[file_altered.mp4]    14.8%   1,572,864/10,634,479  chunk=512KiB    1057 KiB/s
+22:51:06 connection error from 127.0.0.1:52883: ConnectionResetError
+[file_altered.mp4]    21.0%   2,228,224/10,634,479  chunk=640KiB    1077 KiB/s
+22:51:07 connection error from 127.0.0.1:52885: ConnectionResetError
+[file_altered.mp4]    28.3%   3,014,656/10,634,479  chunk=768KiB     515 KiB/s
+22:51:08 connection error from 127.0.0.1:52887: ConnectionResetError
+[file_altered.mp4]   chunk @3,014,656 (768 KiB) failed: timeout: timed out
+22:51:13 [35aa4da6] incomplete chunk @3014656: [Errno 54] Connection reset by peer
+22:51:14 connection error from 127.0.0.1:52891: ConnectionResetError
+[file_altered.mp4]   chunk @3,014,656 (384 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:51:14 [35aa4da6] incomplete chunk @3014656: [Errno 54] Connection reset by peer
+22:51:15 connection error from 127.0.0.1:52895: ConnectionResetError
+[file_altered.mp4]   chunk @3,014,656 (192 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:51:15 [35aa4da6] incomplete chunk @3014656: [Errno 54] Connection reset by peer
+22:51:17 connection error from 127.0.0.1:52899: ConnectionResetError
+[file_altered.mp4]    29.3%   3,112,960/10,634,479  chunk=96KiB     150 KiB/s
+22:51:18 connection error from 127.0.0.1:52901: ConnectionResetError
+[file_altered.mp4]    31.4%   3,342,336/10,634,479  chunk=224KiB     266 KiB/s
+22:51:18 connection error from 127.0.0.1:52903: ConnectionResetError
+[file_altered.mp4]    34.8%   3,702,784/10,634,479  chunk=352KiB     313 KiB/s
+22:51:19 connection error from 127.0.0.1:52905: ConnectionResetError
+[file_altered.mp4]    38.2%   4,063,232/10,634,479  chunk=352KiB     557 KiB/s
+22:51:20 connection error from 127.0.0.1:52907: ConnectionResetError
+[file_altered.mp4]    42.8%   4,554,752/10,634,479  chunk=480KiB     343 KiB/s
+22:51:22 connection error from 127.0.0.1:52909: ConnectionResetError
+[file_altered.mp4]   chunk @4,554,752 (480 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:51:22 [35aa4da6] incomplete chunk @4554752: [Errno 54] Connection reset by peer
+22:51:23 connection error from 127.0.0.1:52913: ConnectionResetError
+[file_altered.mp4]    45.1%   4,800,512/10,634,479  chunk=240KiB     173 KiB/s
+22:51:25 connection error from 127.0.0.1:52915: ConnectionResetError
+[file_altered.mp4]   chunk @4,800,512 (240 KiB) failed: timeout: timed out
+22:51:30 [35aa4da6] incomplete chunk @4800512: [Errno 54] Connection reset by peer
+22:51:30 connection error from 127.0.0.1:52919: ConnectionResetError
+[file_altered.mp4]   chunk @4,800,512 (120 KiB) failed: timeout: timed out
+22:51:35 [35aa4da6] incomplete chunk @4800512: [Errno 54] Connection reset by peer
+22:51:36 connection error from 127.0.0.1:52923: ConnectionResetError
+[file_altered.mp4]    45.7%   4,861,952/10,634,479  chunk=60KiB      70 KiB/s
+22:51:37 connection error from 127.0.0.1:52925: ConnectionResetError
+[file_altered.mp4]    47.5%   5,054,464/10,634,479  chunk=188KiB     243 KiB/s
+22:51:37 connection error from 127.0.0.1:52927: ConnectionResetError
+[file_altered.mp4]   chunk @5,054,464 (316 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:51:38 [35aa4da6] incomplete chunk @5054464: [Errno 54] Connection reset by peer
+22:51:39 connection error from 127.0.0.1:52931: ConnectionResetError
+[file_altered.mp4]   chunk @5,054,464 (158 KiB) failed: timeout: timed out
+22:51:44 [35aa4da6] incomplete chunk @5054464: [Errno 54] Connection reset by peer
+22:51:45 connection error from 127.0.0.1:52937: ConnectionResetError
+[file_altered.mp4]    48.3%   5,135,360/10,634,479  chunk=79KiB     120 KiB/s
+22:51:46 connection error from 127.0.0.1:52939: ConnectionResetError
+[file_altered.mp4]    50.3%   5,347,328/10,634,479  chunk=207KiB     203 KiB/s
+22:51:47 connection error from 127.0.0.1:52941: ConnectionResetError
+[file_altered.mp4]   chunk @5,347,328 (207 KiB) failed: timeout: timed out
+22:51:52 [35aa4da6] incomplete chunk @5347328: [Errno 54] Connection reset by peer
+22:51:52 connection error from 127.0.0.1:52945: ConnectionResetError
+[file_altered.mp4]    51.3%   5,453,312/10,634,479  chunk=103KiB     121 KiB/s
+22:51:53 connection error from 127.0.0.1:52947: ConnectionResetError
+[file_altered.mp4]    53.5%   5,690,368/10,634,479  chunk=231KiB     202 KiB/s
+22:51:54 connection error from 127.0.0.1:52949: ConnectionResetError
+[file_altered.mp4]    55.7%   5,927,424/10,634,479  chunk=231KiB     453 KiB/s
+22:51:55 connection error from 127.0.0.1:52951: ConnectionResetError
+[file_altered.mp4]    59.2%   6,295,552/10,634,479  chunk=359KiB     877 KiB/s
+22:51:55 connection error from 127.0.0.1:52953: ConnectionResetError
+[file_altered.mp4]    63.9%   6,794,752/10,634,479  chunk=487KiB     926 KiB/s
+22:51:56 connection error from 127.0.0.1:52955: ConnectionResetError
+[file_altered.mp4]   chunk @6,794,752 (615 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:51:56 [35aa4da6] incomplete chunk @6794752: [Errno 54] Connection reset by peer
+22:52:02 connection error from 127.0.0.1:52960: ConnectionResetError
+22:52:03 connection error from 127.0.0.1:52962: ConnectionResetError
+[file_altered.mp4]    65.4%   6,952,320/10,634,479  chunk=153KiB     371 KiB/s
+22:52:03 connection error from 127.0.0.1:52964: ConnectionResetError
+[file_altered.mp4]    68.1%   7,240,960/10,634,479  chunk=281KiB     979 KiB/s
+22:52:04 connection error from 127.0.0.1:52966: ConnectionResetError
+[file_altered.mp4]    72.0%   7,660,672/10,634,479  chunk=409KiB    1051 KiB/s
+22:52:04 connection error from 127.0.0.1:52968: ConnectionResetError
+[file_altered.mp4]   chunk @7,660,672 (537 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:52:05 [35aa4da6] incomplete chunk @7660672: [Errno 54] Connection reset by peer
+22:52:06 connection error from 127.0.0.1:52972: ConnectionResetError
+[file_altered.mp4]   chunk @7,660,672 (268 KiB) failed: timeout: timed out
+22:52:11 connection error from 127.0.0.1:52977: ConnectionResetError
+22:52:11 [35aa4da6] incomplete chunk @7660672: [Errno 54] Connection reset by peer
+[file_altered.mp4]    73.3%   7,798,368/10,634,479  chunk=134KiB     247 KiB/s
+22:52:12 connection error from 127.0.0.1:52980: ConnectionResetError
+[file_altered.mp4]    75.9%   8,067,136/10,634,479  chunk=262KiB     390 KiB/s
+22:52:12 connection error from 127.0.0.1:52982: ConnectionResetError
+[file_altered.mp4]    79.6%   8,466,976/10,634,479  chunk=390KiB     405 KiB/s
+22:52:13 connection error from 127.0.0.1:52984: ConnectionResetError
+[file_altered.mp4]   chunk @8,466,976 (518 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:52:14 [35aa4da6] incomplete chunk @8466976: [Errno 54] Connection reset by peer
+22:52:16 connection error from 127.0.0.1:52988: ConnectionResetError
+[file_altered.mp4]   chunk @8,466,976 (259 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:52:17 [35aa4da6] incomplete chunk @8466976: [Errno 54] Connection reset by peer
+22:52:18 connection error from 127.0.0.1:52992: ConnectionResetError
+[file_altered.mp4]    80.9%   8,599,704/10,634,479  chunk=129KiB     494 KiB/s
+22:52:18 connection error from 127.0.0.1:52994: ConnectionResetError
+[file_altered.mp4]    83.3%   8,863,504/10,634,479  chunk=257KiB     938 KiB/s
+22:52:19 connection error from 127.0.0.1:52996: ConnectionResetError
+[file_altered.mp4]    87.1%   9,258,376/10,634,479  chunk=385KiB     817 KiB/s
+22:52:19 connection error from 127.0.0.1:52998: ConnectionResetError
+[file_altered.mp4]    92.0%   9,784,320/10,634,479  chunk=513KiB     778 KiB/s
+22:52:20 connection error from 127.0.0.1:53000: ConnectionResetError
+[file_altered.mp4]    98.2%  10,441,336/10,634,479  chunk=641KiB     423 KiB/s
+22:52:21 connection error from 127.0.0.1:53002: ConnectionResetError
+[file_altered.mp4]   100.0%  10,634,479/10,634,479  chunk=188KiB     198 KiB/s
+22:52:22 connection error from 127.0.0.1:53004: ConnectionResetError
+22:52:23 [35aa4da6] VERIFIED 10,634,479 B in 88.94s; analysing…
+22:52:24 [35aa4da6] report: DAMAGED_VIDEO {'decode_error': 2}
+[file_altered.mp4] RESULT SUCCESS in 91.39s  {"retries": 18, "timeouts": 6, "conn_errors": 12, "hash_rejects": 0, "offset_resyncs": 0, "path_switches": 0, "chunks_sent": 35, "bytes_sent": 10634479, "duplicate_acks": 0}
+22:52:25 connection error from 127.0.0.1:53006: ConnectionResetError
+===== altered: PASS
+
+===== truncated: Truncated video
+[file_truncated.mp4] uploading ./samples/truncated.mp4 (5,848,963 B) sha256=3ea4b42732f1c2cd…
+22:52:25 [320b9769] new upload truncated.mp4 5,848,963 B
+22:52:25 connection error from 127.0.0.1:53009: ConnectionResetError
+[file_truncated.mp4]   chunk @0 (256 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:52:30 [320b9769] incomplete chunk @0: [Errno 54] Connection reset by peer
+22:52:31 connection error from 127.0.0.1:53013: ConnectionResetError
+[file_truncated.mp4]     2.2%     131,072/5,848,963  chunk=128KiB     171 KiB/s
+22:52:32 connection error from 127.0.0.1:53015: ConnectionResetError
+[file_truncated.mp4]   chunk @131,072 (256 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:52:33 [320b9769] incomplete chunk @131072: [Errno 54] Connection reset by peer
+22:52:34 connection error from 127.0.0.1:53019: ConnectionResetError
+[file_truncated.mp4]     4.5%     262,144/5,848,963  chunk=128KiB     188 KiB/s
+22:52:35 connection error from 127.0.0.1:53021: ConnectionResetError
+[file_truncated.mp4]   chunk @262,144 (256 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:52:35 [320b9769] incomplete chunk @262144: [Errno 54] Connection reset by peer
+22:52:36 connection error from 127.0.0.1:53025: ConnectionResetError
+[file_truncated.mp4]     6.7%     393,216/5,848,963  chunk=128KiB     297 KiB/s
+22:52:37 connection error from 127.0.0.1:53027: ConnectionResetError
+[file_truncated.mp4]    11.2%     655,360/5,848,963  chunk=256KiB     952 KiB/s
+22:52:37 connection error from 127.0.0.1:53029: ConnectionResetError
+[file_truncated.mp4]    17.9%   1,048,576/5,848,963  chunk=384KiB    1054 KiB/s
+22:52:37 connection error from 127.0.0.1:53031: ConnectionResetError
+[file_truncated.mp4]    26.9%   1,572,864/5,848,963  chunk=512KiB    1086 KiB/s
+22:52:38 connection error from 127.0.0.1:53033: ConnectionResetError
+[file_truncated.mp4]    38.1%   2,228,224/5,848,963  chunk=640KiB    1065 KiB/s
+22:52:38 connection error from 127.0.0.1:53035: ConnectionResetError
+[file_truncated.mp4]    51.5%   3,014,656/5,848,963  chunk=768KiB     507 KiB/s
+22:52:40 connection error from 127.0.0.1:53037: ConnectionResetError
+[file_truncated.mp4]   chunk @3,014,656 (768 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:52:45 [320b9769] incomplete chunk @3014656: [Errno 54] Connection reset by peer
+22:52:46 connection error from 127.0.0.1:53041: ConnectionResetError
+[file_truncated.mp4]   chunk @3,014,656 (384 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:52:46 [320b9769] incomplete chunk @3014656: [Errno 54] Connection reset by peer
+22:52:47 connection error from 127.0.0.1:53045: ConnectionResetError
+[file_truncated.mp4]   chunk @3,014,656 (192 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:52:48 [320b9769] incomplete chunk @3014656: [Errno 54] Connection reset by peer
+22:52:49 connection error from 127.0.0.1:53049: ConnectionResetError
+[file_truncated.mp4]    53.2%   3,112,960/5,848,963  chunk=96KiB     125 KiB/s
+22:52:50 connection error from 127.0.0.1:53051: ConnectionResetError
+[file_truncated.mp4]    57.1%   3,342,336/5,848,963  chunk=224KiB     262 KiB/s
+22:52:51 connection error from 127.0.0.1:53053: ConnectionResetError
+[file_truncated.mp4]    63.3%   3,702,784/5,848,963  chunk=352KiB     573 KiB/s
+22:52:52 connection error from 127.0.0.1:53055: ConnectionResetError
+[file_truncated.mp4]    71.7%   4,194,304/5,848,963  chunk=480KiB     216 KiB/s
+22:52:54 connection error from 127.0.0.1:53057: ConnectionResetError
+[file_truncated.mp4]   chunk @4,194,304 (480 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:52:55 [320b9769] incomplete chunk @4194304: [Errno 54] Connection reset by peer
+22:52:57 connection error from 127.0.0.1:53061: ConnectionResetError
+[file_truncated.mp4]    75.9%   4,440,064/5,848,963  chunk=240KiB     151 KiB/s
+22:52:58 connection error from 127.0.0.1:53063: ConnectionResetError
+[file_truncated.mp4]   chunk @4,440,064 (240 KiB) failed: timeout: timed out
+22:53:03 [320b9769] incomplete chunk @4440064: [Errno 54] Connection reset by peer
+22:53:04 connection error from 127.0.0.1:53067: ConnectionResetError
+[file_truncated.mp4]    78.0%   4,562,944/5,848,963  chunk=120KiB     179 KiB/s
+22:53:04 connection error from 127.0.0.1:53069: ConnectionResetError
+[file_truncated.mp4]    82.4%   4,816,896/5,848,963  chunk=248KiB     283 KiB/s
+22:53:05 connection error from 127.0.0.1:53071: ConnectionResetError
+[file_truncated.mp4]   chunk @4,816,896 (376 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:53:05 connection error from 127.0.0.1:53073: ConnectionResetError
+22:53:07 connection error from 127.0.0.1:53075: ConnectionResetError
+[file_truncated.mp4]   chunk @4,816,896 (188 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:53:07 [320b9769] incomplete chunk @4816896: [Errno 54] Connection reset by peer
+22:53:09 connection error from 127.0.0.1:53079: ConnectionResetError
+[file_truncated.mp4]    84.0%   4,913,152/5,848,963  chunk=94KiB     115 KiB/s
+22:53:09 connection error from 127.0.0.1:53081: ConnectionResetError
+[file_truncated.mp4]    87.9%   5,140,480/5,848,963  chunk=222KiB     183 KiB/s
+22:53:11 connection error from 127.0.0.1:53083: ConnectionResetError
+[file_truncated.mp4]   chunk @5,140,480 (222 KiB) failed: timeout: timed out
+22:53:16 [320b9769] incomplete chunk @5140480: [Errno 54] Connection reset by peer
+22:53:16 connection error from 127.0.0.1:53087: ConnectionResetError
+[file_truncated.mp4]    89.8%   5,254,144/5,848,963  chunk=111KiB     164 KiB/s
+22:53:17 connection error from 127.0.0.1:53089: ConnectionResetError
+[file_truncated.mp4]    94.0%   5,498,880/5,848,963  chunk=239KiB     217 KiB/s
+22:53:18 connection error from 127.0.0.1:53091: ConnectionResetError
+[file_truncated.mp4]    98.2%   5,743,616/5,848,963  chunk=239KiB     175 KiB/s
+22:53:19 connection error from 127.0.0.1:53093: ConnectionResetError
+[file_truncated.mp4]   100.0%   5,848,963/5,848,963  chunk=102KiB     112 KiB/s
+22:53:20 connection error from 127.0.0.1:53095: ConnectionResetError
+22:53:21 [320b9769] VERIFIED 5,848,963 B in 55.85s; analysing…
+22:53:22 [320b9769] report: DAMAGED_VIDEO {'corrupt_packets': 1, 'frame_count_mismatch': 1, 'early_end': 1, 'decode_error': 1}
+[file_truncated.mp4] RESULT SUCCESS in 57.61s  {"retries": 11, "timeouts": 2, "conn_errors": 9, "hash_rejects": 0, "offset_resyncs": 0, "path_switches": 0, "chunks_sent": 21, "bytes_sent": 5848963, "duplicate_acks": 0}
+22:53:22 connection error from 127.0.0.1:53097: ConnectionResetError
+===== truncated: PASS
+
+===== invalid: Invalid (non-video) file
+[file_invalid.mp4] uploading ./samples/invalid.mp4 (524,288 B) sha256=c0bd564cbe3e30cb…
+22:53:23 [2886f90b] new upload invalid.mp4 524,288 B
+22:53:23 connection error from 127.0.0.1:53100: ConnectionResetError
+[file_invalid.mp4]   chunk @0 (256 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:53:28 [2886f90b] incomplete chunk @0: [Errno 54] Connection reset by peer
+22:53:29 connection error from 127.0.0.1:53107: ConnectionResetError
+[file_invalid.mp4]    25.0%     131,072/524,288  chunk=128KiB     173 KiB/s
+22:53:30 connection error from 127.0.0.1:53110: ConnectionResetError
+[file_invalid.mp4]   chunk @131,072 (256 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:53:31 [2886f90b] incomplete chunk @131072: [Errno 54] Connection reset by peer
+22:53:32 connection error from 127.0.0.1:53114: ConnectionResetError
+[file_invalid.mp4]    50.0%     262,144/524,288  chunk=128KiB     185 KiB/s
+22:53:32 connection error from 127.0.0.1:53116: ConnectionResetError
+[file_invalid.mp4]   chunk @262,144 (256 KiB) failed: ConnectionResetError: [Errno 54] Connection reset by peer
+22:53:33 [2886f90b] incomplete chunk @262144: [Errno 54] Connection reset by peer
+22:53:34 connection error from 127.0.0.1:53120: ConnectionResetError
+[file_invalid.mp4]    75.0%     393,216/524,288  chunk=128KiB     277 KiB/s
+22:53:34 connection error from 127.0.0.1:53122: ConnectionResetError
+[file_invalid.mp4]   100.0%     524,288/524,288  chunk=128KiB     695 KiB/s
+22:53:34 connection error from 127.0.0.1:53124: ConnectionResetError
+22:53:34 [2886f90b] VERIFIED 524,288 B in 11.83s; analysing…
+22:53:35 [2886f90b] report: INVALID_VIDEO {'unparseable_container': 1}
+[file_invalid.mp4] RESULT SUCCESS in 12.19s  {"retries": 3, "timeouts": 0, "conn_errors": 3, "hash_rejects": 0, "offset_resyncs": 0, "path_switches": 0, "chunks_sent": 4, "bytes_sent": 524288, "duplicate_acks": 0}
+22:53:35 connection error from 127.0.0.1:53126: ConnectionResetError
+===== invalid: PASS
+
+===== reject_incomplete: Server refuses to complete a partial upload
+22:53:35 [727e0135] new upload x.mp4 300,000 B
+===== reject_incomplete: PASS
+
+===== reject_hash: Server rejects whole-file SHA-256 mismatch
+22:53:35 [f52a5e4b] new upload y.mp4 200,000 B
+22:53:35 [f52a5e4b] REJECTED sha mismatch
+===== reject_hash: PASS
+
+===== reject_chunk: Server rejects corrupted chunk
+22:53:35 [851bae66] new upload z.mp4 50,000 B
+22:53:35 [851bae66] chunk @0 hash mismatch -> rejected
+===== reject_chunk: PASS
+
+# Transfer reliability & integrity test evidence
+
+Run at 2026-11-19 22:53:35 · 13/13 passed
+
+| # | Scenario | Result | Time (s) | Transfer | Retries | Timeouts | Hash rejects | Path switches | Resyncs | Verdict |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Stable connection (100%) | ✅ PASS | 11.3 | SUCCESS | 0 | 0 | 0 | 0 | 0 | VALID_NO_ANOMALIES |
+| 2 | Variable signal 20–100% | ✅ PASS | 82.2 | SUCCESS | 11 | 6 | 0 | 0 | 0 | VALID_WITH_FRAME_ANOMALIES |
+| 3 | Temporary interruptions, timeouts, reconnection | ✅ PASS | 63.0 | SUCCESS | 10 | 4 | 0 | 0 | 0 | VALID_WITH_FRAME_ANOMALIES |
+| 4 | Connection switching Wi-Fi → cellular | ✅ PASS | 71.7 | SUCCESS | 10 | 3 | 0 | 1 | 0 | VALID_WITH_FRAME_ANOMALIES |
+| 5 | Fluctuating speed + resets + in-flight corruption | ✅ PASS | 267.7 | SUCCESS | 88 | 16 | 51 | 0 | 0 | VALID_NO_ANOMALIES |
+| 6 | Client crash at 40% then resume | ✅ PASS | 120.4 | SUCCESS | 6 | 2 | 0 | 0 | 0 | VALID_NO_ANOMALIES |
+| 7 | Dead network: stall must be reported, not success | ✅ PASS | 19.2 | STALLED | 3 | 1 | 0 | 0 | 0 |  |
+| 8 | Altered (bit-flipped) video | ✅ PASS | 91.4 | SUCCESS | 18 | 6 | 0 | 0 | 0 | DAMAGED_VIDEO |
+| 9 | Truncated video | ✅ PASS | 57.6 | SUCCESS | 11 | 2 | 0 | 0 | 0 | DAMAGED_VIDEO |
+| 10 | Invalid (non-video) file | ✅ PASS | 12.2 | SUCCESS | 3 | 0 | 0 | 0 | 0 | INVALID_VIDEO |
+| 11 | Server refuses to complete a partial upload | ✅ PASS | 0.0 | 409 |  |  |  |  |  |  |
+| 12 | Server rejects whole-file SHA-256 mismatch | ✅ PASS | 0.0 | 422 |  |  |  |  |  |  |
+| 13 | Server rejects corrupted chunk | ✅ PASS | 0.0 | 422 |  |  |  |  |  |  |
+
+## Network conditions observed by the impairment proxy
+
+| Scenario | Path | Profile | Strength min–max | Stalls | Resets | Corrupted blocks | Outage kills |
+|---|---|---|---|---|---|---|---|
+| stable | wired | stable | 100%–100% | 0 | 0 | 0 | 0 |
+| variable | mobile | variable | 20%–100% | 8 | 3 | 0 | 0 |
+| interrupt | flaky | interrupt | 20%–100% | 5 | 3 | 0 | 3 |
+| switching | wifi | wifi_dies | 100%–100% | 0 | 0 | 0 | 0 |
+| switching | cellular | cellular | 20%–100% | 4 | 3 | 0 | 0 |
+| hostile | hostile | hostile | 20%–100% | 17 | 19 | 74 | 1 |
+| crash_resume | mobile | variable | 20%–100% | 3 | 3 | 0 | 0 |
+| stall_detect | dead | wifi_dies | 100%–100% | 0 | 0 | 0 | 0 |
+| altered | mobile | variable | 20%–100% | 8 | 10 | 0 | 0 |
+| truncated | mobile | variable | 20%–100% | 4 | 7 | 0 | 0 |
+| invalid | mobile | variable | 20%–100% | 1 | 2 | 0 | 0 |
+
+## Anomalies reported per uploaded video
+
+- **stable** → `VALID_NO_ANOMALIES` {}
+- **variable** → `VALID_WITH_FRAME_ANOMALIES` {"missing_source_frames": 3, "timestamp_gap": 3, "abrupt_change": 2}
+- **interrupt** → `VALID_WITH_FRAME_ANOMALIES` {"missing_source_frames": 2, "duplicated_source_frame": 2, "abrupt_change": 1}
+- **switching** → `VALID_WITH_FRAME_ANOMALIES` {"timestamp_gap": 1, "abrupt_change": 1}
+- **hostile** → `VALID_NO_ANOMALIES` {}
+- **crash_resume** → `VALID_NO_ANOMALIES` {}
+- **altered** → `DAMAGED_VIDEO` {"decode_error": 2}
+- **truncated** → `DAMAGED_VIDEO` {"corrupt_packets": 1, "frame_count_mismatch": 1, "early_end": 1, "decode_error": 1}
+- **invalid** → `INVALID_VIDEO` {"unparseable_container": 1}
+
+Per-scenario client attempt logs and strength traces: `evidence/logs/*.json`. Integrity reports: `evidence/reports/*.json|html`.
+
